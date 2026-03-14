@@ -16,20 +16,22 @@ and the examples are taken from the [AnBx tool](https://www.dais.unive.it/~modes
 
 The following table summarizes the protocols and the security goals:
 
-| Protocol  |  Security goal 
-| -------- |  ---------------------
-| AndrewSecureRPC |  ```A``` authenticates ```B``` on ```NB2```
-| From_A_and_Back      | ```Msg secret``` between ```a```,```B```
-| GSM                  |  ```Msg``` secret between ```B```,```M``` 
-| NSPK                 | ```NxNA``` secret between ```A```,```B```
-| ISOPK2PMAP           |  ```A```  authenticates ```B``` on ```Text3``` 
-|                      |  ```B```  authenticates ```A``` on ```Text1``` 
-| ISOSK2PMAP           |  ```A```  authenticates ```B``` on ```Text3``` 
-|                      |  ```B```  authenticates ```A``` on ```Text1``` 
-| Kerberos             |  ```C```  authenticates ```s``` on ```Payload``` 
-| SSO                 |  ```SP```  authenticates ```C``` on ```URI``` 
-|                  |  ```C```  authenticates ```SP``` on ```Data``` 
-|                  |  ```Data```  secret between ```SP```, ```C``` 
+| Protocol  |  Security goal | Test Case
+| -------- |  --------------------- | ----------------------
+| AndrewSecureRPC (P1)  |  ```A``` authenticates ```B``` on ```NB2``` | P_1_A (replay)
+| From_A_and_Back (P_2) | ```Msg secret``` between ```a```,```B``` | P_2_S$ (passive) 
+| GSM (P_3)            |  ```Msg``` secret between ```B```,```M``` | P_3_S_1 (passive)
+|                      |                                            | P_3_S_2 (mitm)
+| NSPK (P_4)           | ```NxNA``` secret between ```A```,```B``` | P_4_S_1 (passive)
+|                        |                                        | P_4_S_2 (mitm)
+| ISOPK2PMAP (P_5)     |  ```A```  authenticates ```B``` on ```Text3``` | P_5_A1 (reflection)
+|                      |  ```B```  authenticates ```A``` on ```Text1``` | P_5_A2 (reflection)
+| ISOSK2PMAP (P_6)     |  ```A```  authenticates ```B``` on ```Text3``` | P_6_A1 (replay)
+|                      |  ```B```  authenticates ```A``` on ```Text1``` | P_6_A2 (replay)
+| Kerberos (P_7)       |  ```C```  authenticates ```s``` on ```Payload``` | P_7_A (mitm)
+| SSO (P_8)        |  ```SP```  authenticates ```C``` on ```URI``` | P_8_A1 (mitm)
+|                  |  ```C```  authenticates ```SP``` on ```Data``` | P_8_A2 (replay)
+|                  |  ```Data```  secret between ```SP```, ```C``` | P_8_S (mitm)
 
 
 All the protocols violate the corresponding security goals.
