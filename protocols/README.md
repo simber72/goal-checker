@@ -18,20 +18,20 @@ The following table summarizes the protocols, the security goals and the negativ
 
 | Protocol  |  Security goal | Test Case
 | -------- |  --------------------- | ----------------------
-| AndrewSecureRPC (P1)  |  ```A``` authenticates ```B``` on ```NB2``` | P_1_A (replay)
-| From_A_and_Back (P_2) | ```Msg secret``` between ```a```,```B``` | P_2_S (passive) 
-| GSM (P_3)            |  ```Msg``` secret between ```B```,```M``` | P_3_S_1 (passive)
-|                      |                                            | P_3_S_2 (mitm)
-| NSPK (P_4)           | ```NxNA``` secret between ```A```,```B``` | P_4_S_1 (passive)
-|                        |                                        | P_4_S_2 (mitm)
-| ISOPK2PMAP (P_5)     |  ```A```  authenticates ```B``` on ```Text3``` | P_5_A1 (reflection)
-|                      |  ```B```  authenticates ```A``` on ```Text1``` | P_5_A2 (reflection)
-| ISOSK2PMAP (P_6)     |  ```A```  authenticates ```B``` on ```Text3``` | P_6_A1 (replay)
-|                      |  ```B```  authenticates ```A``` on ```Text1``` | P_6_A2 (replay)
-| Kerberos (P_7)       |  ```C```  authenticates ```s``` on ```Payload``` | P_7_A (mitm)
-| SSO (P_8)        |  ```SP```  authenticates ```C``` on ```URI``` | P_8_A1 (mitm)
-|                  |  ```C```  authenticates ```SP``` on ```Data``` | P_8_A2 (replay)
-|                  |  ```Data```  secret between ```SP```, ```C``` | P_8_S (mitm)
+| AndrewSecureRPC (P1)  |  ```A``` authenticates ```B``` on ```NB2``` | P1_A (replay)
+| From_A_and_Back (P2) | ```Msg secret``` between ```a```,```B``` | P2_S (passive) 
+| GSM (P3)            |  ```Msg``` secret between ```B```,```M``` | P3_S_1 (passive)
+|                      |                                            | P3_S_2 (mitm)
+| NSPK (P4)           | ```NxNA``` secret between ```A```,```B``` | P4_S_1 (passive)
+|                        |                                        | P4_S_2 (mitm)
+| ISOPK2PMAP (P5)     |  ```A```  authenticates ```B``` on ```Text3``` | P5_A1 (reflection)
+|                      |  ```B```  authenticates ```A``` on ```Text1``` | P5_A2 (reflection)
+| ISOSK2PMAP (P6)     |  ```A```  authenticates ```B``` on ```Text3``` | P6_A1 (replay)
+|                      |  ```B```  authenticates ```A``` on ```Text1``` | P6_A2 (replay)
+| Kerberos (P7)       |  ```C```  authenticates ```s``` on ```Payload``` | P7_A (mitm)
+| SSO (P8)        |  ```SP```  authenticates ```C``` on ```URI``` | P8_A1 (mitm)
+|                  |  ```C```  authenticates ```SP``` on ```Data``` | P8_A2 (replay)
+|                  |  ```Data```  secret between ```SP```, ```C``` | P8_S (mitm)
 
 
 All the protocols violate the corresponding security goals (at least a negative test case succeeds).
