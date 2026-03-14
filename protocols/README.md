@@ -1,4 +1,4 @@
-# 🤝 Set of protocols used in the experiments
+# 🤝 Protocols used in the experiments
 The folder ```protocols``` includes the artifacts produced for a set protocols. They are organized in several subfolders:
 ```
 ├── protocols/
@@ -10,7 +10,7 @@ The folder ```protocols``` includes the artifacts produced for a set protocols. 
     └── src/         <----------------- Java code of protocol simulators
 ```
 
-## Protocols and security goals (anbx)
+## Protocols, security goals and negative test cases (anbx)
 Procols and security goals are specified using the [AnBx notation](https://paolo.science/anbxtutorial/tools/OFMC-tutorial.pdf)
 and the examples are taken from the [AnBx tool](https://www.dais.unive.it/~modesti/anbx/).
 
