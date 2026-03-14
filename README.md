@@ -1,4 +1,4 @@
-# CryptoSimulator
+# Goal-checker
 Checking security goals on execution traces of the Java-based implementation of cryptographic protocols produced by the AnBx framework (https://paolo.science/anbx/).
 
 
