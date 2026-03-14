@@ -1,0 +1,15 @@
+_SET ?B 'alice'
+_SET ?a 'bob'
+_SET ?agreesMsg (generateNumberMsg | inv_checkMsg | eq_checkMsg)
+_SET ?generatesMsg (generateNumberMsg)
+_SET ?Msg 'X0'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL secret:[?Msg],[?a,?B]
+
+;SECRET_VIOLATION
+F z.(("(z)z[active]==?a" | "(z)z[active]==?B") & ?generatesMsg & X F y.(("(y)y[active]!=?a") & ("(y)y[active]!=?B")& ?can_read & ("(z,y)z[mess]==y[mess]") & ("(y)y[type]!='javax.crypto.SealedObject.toString'")))
+
+
+_WRITE
+_BYE

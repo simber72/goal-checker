@@ -1,0 +1,1027 @@
+Buildfile: /Users/usuario/repositoriosGitHub/CriptoSimulator/protocols/src/sso_a1/build.xml
+
+ROLE_idp:
+     [java] Debug [SSO_A1-ALWAYS] - Verbose mode on
+     [java] Debug [ROLE_idp-APPLICATION] - Reading config file: SSO_A1.properties
+     [java] Debug [ROLE_idp-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_idp-ENCRYPTION] - cipherScheme = AES
+     [java] Debug [ROLE_idp-ENCRYPTION] - keySize = 256
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyGenerationScheme = AES
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyGenerationSize = 256
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyGenerationSchemePBE = PBKDF2WithHmacSHA512
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyPairGenerationScheme = RSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyPairGenerationSize = 2048
+     [java] Debug [ROLE_idp-ENCRYPTION] - secureRandomAlgorithm = DRBG
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmacAlgorithm = HmacSHA256
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmacKeySize = 256
+     [java] Debug [ROLE_idp-ENCRYPTION] - messageDigestAlgorithm = SHA-256
+     [java] Debug [ROLE_idp-ENCRYPTION] - messageDigestSignatureAlgorithm = SHA256
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyAgreementAlgorithm = DH
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyAgreementKeyPairGenerationScheme = DH
+     [java] Debug [ROLE_idp-ENCRYPTION] - dhModulusSize = 4096
+     [java] Debug [ROLE_idp-ENCRYPTION] - ecGenParameterSpec = secp256r1
+     [java] Debug [ROLE_idp-ENCRYPTION] - asymCipherSchemeBlock = RSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - sslContext = TLSv1.3
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyTypeToCipher = RSA -> RSA/ECB/OAEPWithSHA-256AndMGF1Padding, X25519 -> ECDHwithX25519-KDF2-SHA256/AES-GCM/256/NoPadding, Camellia -> Camellia/CBC/PKCS7Padding, X448 -> ECDHwithX448-KDF2-SHA512/AES-GCM/256/NoPadding, ElGamal -> ElGamal/ECB/OAEPWithSHA-256AndMGF1Padding, ChaCha -> ChaCha20-Poly1305, EC -> ECIESwithAES-GCM/256/NoPadding, AES -> AES/CBC/PKCS5Padding, Blowfish -> Blowfish/CBC/PKCS5Padding
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyTypeToSignature = RSA -> SHA256withRSA, DSA -> SHA256withDSA, Ed448 -> Ed448, RSASSA-PSS -> RSASSA-PSS, Ed25519 -> Ed25519, EC -> SHA256withECDSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - securityProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - cipherSchemeProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyGenerationSchemeProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyGenerationSchemePBEProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyPairGenerationSchemeProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - secureRandomProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmacProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - messageDigestProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - signatureProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - asymEncProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - keyAgreementProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - sslContextProvider = default
+     [java] Debug [ROLE_idp-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_idp-APPLICATION] - Loading aliases
+     [java] Debug [ROLE_idp-APPLICATION] - Role: ROLE_I - Alias: alice
+     [java] Debug [ROLE_idp-APPLICATION] - Role: ROLE_SP - Alias: bob
+     [java] Debug [ROLE_idp-APPLICATION] - Role: ROLE_idp - Alias: charlie
+     [java] Debug [ROLE_idp-APPLICATION] - myAlias: charlie
+     [java] Debug [ROLE_idp-APPLICATION] - Role: ROLE_C - Alias: david
+     [java] Debug [ROLE_idp-APPLICATION] - Host: localhost - Port: 55561
+     [java] Debug [ROLE_idp-APPLICATION] - Channel Type: SSL_PLAIN - Role: SERVER
+     [java] Debug [ROLE_idp-APPLICATION] - Channel: ROLE_idp_channel_ROLE_I_Server_Insecure
+     [java] Debug [ROLE_idp-APPLICATION] - myRole: ROLE_idp
+     [java] Debug [ROLE_idp-APPLICATION] - sessions: 10
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading KeyStore: tls #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Reading config file (KSS): ../../keystore/charlie.pwd
+     [java] Debug [ROLE_idp-ENCRYPTION] - tls - KeyStoreType: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - tls - LocalKeyStore: ../../keystore/charlie_tls.private
+     [java] Debug [ROLE_idp-ENCRYPTION] - tls - RemotelKeyStore: ../../keystore/charlie_tls.public
+     [java] Debug [ROLE_idp-ENCRYPTION] - My Alias: charlie
+     [java] Debug [ROLE_idp-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading KeyStore: enc #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Reading config file (KSS): ../../keystore/charlie.pwd
+     [java] Debug [ROLE_idp-ENCRYPTION] - enc - KeyStoreType: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - enc - LocalKeyStore: ../../keystore/charlie_enc.private
+     [java] Debug [ROLE_idp-ENCRYPTION] - enc - RemotelKeyStore: ../../keystore/charlie_enc.public
+     [java] Debug [ROLE_idp-ENCRYPTION] - My Alias: charlie
+     [java] Debug [ROLE_idp-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading KeyStore: sig #2
+     [java] Debug [ROLE_idp-ENCRYPTION] - Reading config file (KSS): ../../keystore/charlie.pwd
+     [java] Debug [ROLE_idp-ENCRYPTION] - sig - KeyStoreType: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - sig - LocalKeyStore: ../../keystore/charlie_sig.private
+     [java] Debug [ROLE_idp-ENCRYPTION] - sig - RemotelKeyStore: ../../keystore/charlie_sig.public
+     [java] Debug [ROLE_idp-ENCRYPTION] - My Alias: charlie
+     [java] Debug [ROLE_idp-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading KeyStore: hmc #3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Reading config file (KSS): ../../keystore/charlie.pwd
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmc - KeyStoreType: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmc - LocalKeyStore: ../../keystore/charlie_hmc.private
+     [java] Debug [ROLE_idp-ENCRYPTION] - hmc - RemotelKeyStore: ../../keystore/charlie_hmc.public
+     [java] Debug [ROLE_idp-ENCRYPTION] - My Alias: charlie
+     [java] Debug [ROLE_idp-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_idp-ENCRYPTION] - Building KeyStore: tls #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Local KeyStore: ../../keystore/charlie_tls.private - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/charlie_tls.public - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Building KeyStore: enc #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Local KeyStore: ../../keystore/charlie_enc.private - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/charlie_enc.public - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Building KeyStore: sig #2
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Local KeyStore: ../../keystore/charlie_sig.private - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/charlie_sig.public - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Building KeyStore: hmc #3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Local KeyStore: ../../keystore/charlie_hmc.private - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/charlie_hmc.public - Type: PKCS12
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate retrieved: <charlie>
+     [java] Debug [ROLE_idp-SESSION] - Initializing channel - cs: Channel Settings - Port: 55561 - Role: SERVER - Type: SSL_PLAIN
+     [java] Debug [ROLE_idp-SESSION] - Initializing channel - keystore: anbxj.Crypto_KeyStoreSettings@2f7c7260
+     [java] Debug [ROLE_idp-SESSION] - Opening session
+     [java] Debug [ROLE_idp-NETWORK] - Starting server on port 55561 ...
+     [java] Debug [ROLE_idp-ALWAYS] - Server started on port 55561
+     [java] Debug [ROLE_idp-NETWORK] - Waiting for clients ...
+     [java] Debug [ROLE_idp-NETWORK] - Request from Client received ...
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 1/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@3551a94, sealedMessage=javax.crypto.SealedObject@531be3c5, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@3551a94 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@153f5a29 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@531be3c5
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@7946e1f4
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@7946e1f4 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@8bd1b6a - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: 8347023
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@8bd1b6a, Crypto_ByteArray [bytearray=[-27, -67, 95, 32, -3, -44, -44, 22, -47, -46, 60, -16, -78, -10, -27, -94, 11, -119, -92, 5, -80, -124, 68, -36, 30, 49, 123, 56, 102, -71, -100, -70, -111, -60, 55, 50, -70, -10, -21, -82, 96, 33, 46, -81, 40, 93, 85, -82, 84, -117, 116, 68, -40, 66, 103, 105, 94, 100, 89, -95, 54, 92, 63, -9, -111, 22, -106, 122, -77, 6, -114, 5, 6, -77, 99, 103, -4, 100, 51, 73, -122, 77, -39, 74, 17, -120, -77, -93, 0, -22, 14, -111, -99, 38, 60, 127, 27, 55, 60, 36, -111, 73, -6, -85, -86, -70, 80, -70, -51, 19, -10, -36, -58, 125, -60, -111, -58, 95, 121, -76, -51, -126, 54, 44, 121, -37, -33, 12, -19, -77, -84, 79, -95, -41, 4, -43, 4, 63, 106, -74, -57, -5, -33, -122, -29, -120, 95, 10, -53, -59, -86, 90, 108, 101, 121, -117, 87, -116, -116, 73, 5, -16, -19, -50, 7, 120, 6, -20, 34, -34, 50, -64, -22, 40, 0, 115, -126, 9, 59, 2, 9, 74, -69, 82, -119, -19, 9, 4, -92, -84, 115, 34, -116, -78, -2, 38, 64, 19, 71, -92, -126, 44, -56, -84, 28, -127, -84, -77, 119, -66, 93, 107, 36, -68, 21, 90, -88, -58, 67, 113, -110, 62, -13, 53, 124, -128, 22, -71, 73, -40, -7, -69, -100, 14, 80, 23, 30, -46, 26, -3, 48, 8, 19, 31, 15, 102, 65, 45, -85, -9, 84, 7, -40, -100, 2, 51]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@d8355a8 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@159a1 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@d8355a8 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@3e6fa38a - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@66a3ffec - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@1e88b3c - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@1e88b3c, sealedMessage=javax.crypto.SealedObject@3e6fa38a, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@1e88b3c, sealedMessage=javax.crypto.SealedObject@3e6fa38a, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 1/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 2/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@4883b407, sealedMessage=javax.crypto.SealedObject@7d9d1a19, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@4883b407 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@42e26948 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@7d9d1a19
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@57baeedf
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@57baeedf - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@1a968a59 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: 591852015
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@1a968a59, Crypto_ByteArray [bytearray=[-121, 15, 118, -117, -35, -48, -34, -121, 10, 50, -74, -126, 46, -3, -50, 27, 108, -103, 23, -55, 24, -76, -120, 63, -23, 29, 24, 100, -49, -29, 103, 112, 122, -31, 48, 98, -121, 4, -40, 14, 28, -67, 25, -16, 73, -49, 64, 22, -42, -70, 59, -81, 114, 67, -50, 100, -52, 99, 54, 100, -49, 109, 56, 65, 95, -99, 91, -54, 88, 88, -117, -111, -80, 8, -50, -124, 81, 121, -4, -96, 53, 41, 0, -54, -10, 123, 108, 92, -1, 91, 100, -97, 22, -17, -115, 40, 11, -59, 84, 58, -44, -29, -37, 44, 48, 126, 78, 92, -45, -94, -93, -43, -68, -103, 70, 102, -119, -34, -106, 112, 90, -96, -24, 30, -46, -93, -1, 1, -37, -128, -66, -4, 56, -100, 19, -72, -83, 52, 15, 2, -58, 116, 61, 29, 45, -20, 76, 24, -23, -83, -48, 40, -91, 54, -20, 46, 74, 28, 26, 98, -59, -78, -83, 122, 53, 119, -45, -21, 16, -69, 87, 63, -48, -46, -9, -84, 89, -21, -9, -122, -11, -59, -80, -25, -127, -103, 17, 6, -68, 59, 113, 91, -74, 29, 61, -97, 83, -49, 26, 32, -127, 48, 3, -122, 108, -8, -109, 6, 83, 19, 113, 107, -80, -61, 22, -58, 55, -118, -41, 96, 12, 46, -11, 126, -53, 81, -100, 2, 125, 55, 116, -33, 35, -88, 19, 72, 125, 14, -47, -77, 51, 68, -11, 125, -8, -86, 111, 126, -55, -36, 28, -9, 21, 27, 77, -97]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@4dfa3a9d - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@175de - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@4dfa3a9d - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@f6c48ac - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@13deb50e - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@239963d8 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@239963d8, sealedMessage=javax.crypto.SealedObject@f6c48ac, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@239963d8, sealedMessage=javax.crypto.SealedObject@f6c48ac, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 2/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 3/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@14bf9759, sealedMessage=javax.crypto.SealedObject@5f341870, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@14bf9759 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@553f17c - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@5f341870
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@4f7d0008
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@4f7d0008 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@42dafa95 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -1030268732
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@42dafa95, Crypto_ByteArray [bytearray=[81, -123, -25, -32, 99, 74, 75, -82, -102, 122, 118, 103, -57, -44, 21, 14, 34, 107, 77, -16, 1, 31, -7, -6, 110, -78, -93, 121, 22, -73, 70, 26, 106, 41, -41, -2, -35, -123, -76, -57, -10, -76, -108, 36, -37, 29, 27, 108, 120, -117, 106, -89, 38, -71, -10, 54, -36, 126, 122, -123, 35, 40, -9, 107, -31, 107, 98, -72, 115, 8, -86, -31, -93, -95, -14, -31, 45, -61, -67, -70, -109, 67, 90, -60, 12, -57, 44, 68, 27, 14, 93, -60, -4, -82, -124, -44, -85, -1, -102, -18, 120, -70, -104, -42, -60, -60, 30, 127, -24, 74, -6, -65, 96, 10, -98, 61, -80, 115, 62, -46, -73, 36, 9, 21, -22, 42, -85, 102, 21, 113, 5, 104, -68, -80, 112, 121, 101, 71, 67, 64, 19, 123, -38, -55, -64, -75, 102, -53, -2, 100, 67, 34, 120, -35, -103, -92, 104, -95, 0, -24, 46, -43, -19, 44, 56, -66, -44, 94, -38, -63, -44, 68, -11, -125, 8, -64, 109, -44, -85, -128, 70, -53, -35, -70, 6, -75, -16, 58, 35, -9, -81, -123, 32, -66, 114, 71, 25, 59, 72, -70, 99, 8, 73, -34, 55, 67, -40, 98, 56, -113, -92, 68, 126, 107, 101, -82, 111, 19, -117, 3, 65, -52, -67, 64, 8, 89, -3, 102, -63, 42, 83, -128, 122, 81, -118, -47, -60, 7, 68, 47, 71, 64, -124, -102, 109, -72, -24, -93, -45, 6, -55, -27, 69, -30, 22, 2]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@73ad2d6 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@fffe9aa5 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@73ad2d6 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@5700d6b1 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@6fd02e5 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@5bcab519 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@5bcab519, sealedMessage=javax.crypto.SealedObject@5700d6b1, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@5bcab519, sealedMessage=javax.crypto.SealedObject@5700d6b1, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 3/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 4/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@490ab905, sealedMessage=javax.crypto.SealedObject@56ac3a89, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@490ab905 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@27c20538 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@56ac3a89
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@72d818d1
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@72d818d1 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@6e1567f1 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: 1991489963
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@6e1567f1, Crypto_ByteArray [bytearray=[-9, 54, -113, -62, -110, 114, 34, 34, 0, -34, -93, 60, 112, -44, -24, 71, -82, -46, 2, -33, -59, 35, 43, -11, 24, 1, 9, -71, -96, -66, -67, 82, 32, -40, -45, 107, -37, 103, 18, 17, -15, -78, 103, -10, 30, 54, -45, 25, 115, 119, 86, 114, 123, -126, 107, -6, -29, 4, 74, 43, -63, 123, -36, 18, -74, -80, -64, 31, -54, 64, 61, 124, 41, 5, 22, -21, 39, 118, -57, 125, -82, 81, -55, 59, 52, 108, 69, -84, -21, 50, -78, 25, 115, -10, -62, 58, 70, 125, -15, -23, -110, 93, 15, 126, -29, 9, -43, 106, -34, 60, 62, -34, 115, -35, -111, -121, 57, 43, 116, -110, 54, 26, 21, 48, -71, -61, 6, -117, -30, -80, -24, -121, -77, 108, 34, -40, -62, 96, -72, -119, 2, -6, -57, -84, -54, -68, 58, -102, 79, 90, -99, -114, 86, -76, 42, -37, 127, 45, -116, -13, 57, 53, 78, 48, -24, -76, -75, 43, 46, -57, -74, -59, -25, 60, -41, -3, -125, 94, 36, 67, 121, -127, 57, -86, -12, 107, 12, -24, -109, -119, 55, -103, 94, 3, 111, 98, -44, 23, 36, 52, 54, 99, 86, 48, 95, -39, 19, 100, 85, -3, 62, -77, 115, 7, 55, -26, 58, -8, -4, 30, 24, 46, 101, -46, -23, -55, -96, -67, -79, -76, 66, -65, 101, -97, -74, -85, 114, 31, -104, 17, -79, 96, -127, -121, 104, 60, -31, 111, 111, 23, 24, 36, 103, -81, -14, 59]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@ff5b51f - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@17835 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@ff5b51f - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@4bec1f0c - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@6adede5 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@2d928643 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@2d928643, sealedMessage=javax.crypto.SealedObject@4bec1f0c, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@2d928643, sealedMessage=javax.crypto.SealedObject@4bec1f0c, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 4/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 5/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@64bf3bbf, sealedMessage=javax.crypto.SealedObject@55d56113, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@64bf3bbf - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@148080bb - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@55d56113
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@dc24521
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@dc24521 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@7e0b0338 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -1136165363
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@7e0b0338, Crypto_ByteArray [bytearray=[-113, -58, 124, 59, 31, -99, 61, 76, -26, -108, -40, 9, -73, -75, 58, 93, 9, 81, 69, -109, 17, -101, -55, -81, 23, -51, -105, 25, 44, 106, -66, -91, 107, -111, -73, 37, -57, -45, 114, -103, -49, 3, 60, 83, 97, 58, 21, 29, 52, 95, -29, -8, -53, 35, 6, 87, 62, -8, -124, 16, -39, -98, -10, -91, 84, -67, 43, -20, 27, -88, 109, -24, 122, 78, 126, 8, 125, 34, -73, 62, -44, 96, -61, 45, -3, -40, 125, -6, -13, -107, 27, 47, 16, -62, 112, -16, -29, 69, 117, 94, -73, 56, 42, 3, 23, 9, 46, 83, -19, -101, 69, 103, -16, -98, -48, -98, 56, -41, -67, 35, -2, 53, -100, -47, 76, -17, -94, -34, -57, 101, -45, -85, 38, -88, 7, 121, -67, -94, 56, 60, -46, -128, 14, -25, 98, -95, -44, -18, 22, 98, -71, -25, 29, -6, 41, -48, 32, 55, 44, 86, 46, -29, 26, 117, 26, -62, 32, -116, 105, 0, -128, -31, 58, -66, 118, 103, -16, -105, 69, 54, 64, 53, 6, -4, 54, 119, 100, 72, 53, 89, -62, -16, 11, 115, 58, -34, 46, -105, -1, -86, 114, -125, -96, 59, -95, 17, 68, 51, 108, -128, 30, -102, -61, -59, 115, 60, -29, 122, -96, 65, 90, 8, 53, 106, -91, -87, -77, 84, 49, -59, -4, 112, 54, 93, -113, -79, 122, 114, -100, 7, 122, -128, -95, 116, -60, 16, -61, -122, -22, 86, -25, 75, 124, -33, -86, 23]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@544fe44c - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@17315 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@544fe44c - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@21213b92 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@a67c67e - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@3327bd23 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@3327bd23, sealedMessage=javax.crypto.SealedObject@21213b92, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@3327bd23, sealedMessage=javax.crypto.SealedObject@21213b92, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 5/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 6/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@5ec0a365, sealedMessage=javax.crypto.SealedObject@4fe3c938, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@5ec0a365 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@5383967b - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@4fe3c938
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@2ac273d3
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@2ac273d3 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@6fc6f14e - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -1808624390
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@6fc6f14e, Crypto_ByteArray [bytearray=[-26, 26, 51, -102, 29, 32, 3, -14, -40, -70, -103, -56, 25, 115, -127, 5, 30, 107, -2, -65, -32, -126, 7, 114, -89, 92, -103, 51, 84, -116, 73, -33, 15, 18, 4, -81, 105, 40, -5, -104, -3, -116, -37, -84, -104, -9, -30, 85, -116, 96, -37, -32, -66, -107, 40, -55, -113, 48, 37, 105, 7, 80, -76, 101, 22, 113, 90, 105, -50, -102, -67, -100, 36, -52, -94, 58, 23, 118, 40, 124, 75, -122, 55, -28, 9, -66, -90, 27, 114, 74, -87, 72, 71, -98, -119, 92, 54, 68, -90, 23, 112, 88, 93, -98, -69, 28, -98, 14, 5, 116, 70, 94, -23, -56, -14, 47, -45, -36, 91, -55, -37, 36, 58, -124, -73, 12, -54, 59, 115, -57, 52, 96, -94, -54, 91, -28, -17, -68, 14, -68, 29, -10, 111, -52, 67, 32, 62, 51, -17, -45, 6, -24, -68, 4, -101, 43, 63, -77, 64, -11, 6, 6, 110, -77, 80, 13, 42, 12, -45, 79, -110, -128, -55, 21, 92, -19, 51, 101, -60, -74, -15, 111, 48, -58, 117, 31, 55, -110, 13, -44, 126, 55, -50, 7, -89, -103, 123, -4, 79, 52, 26, 108, 108, -107, 91, -48, -82, -100, -78, 65, 116, 64, -29, -34, 9, 36, -117, -52, -30, -117, 92, 106, 60, 57, -98, -62, 122, 72, -69, -7, -70, -65, -71, -104, 64, 79, 27, 14, 60, 127, -89, -67, 17, -78, 59, -109, -89, -69, 52, -85, 65, -64, 92, 34, 82, 99]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@527740a2 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@fffe89e3 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@527740a2 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@370736d9 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@5f9d02cb - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@6536e911 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6536e911, sealedMessage=javax.crypto.SealedObject@370736d9, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6536e911, sealedMessage=javax.crypto.SealedObject@370736d9, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 6/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 7/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@185d8b6, sealedMessage=javax.crypto.SealedObject@67784306, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@185d8b6 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@eec5a4a - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@67784306
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@2b2948e2
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@2b2948e2 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@3b0143d3 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: 982407755
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@3b0143d3, Crypto_ByteArray [bytearray=[-47, 69, 90, 96, 51, -44, 76, 1, -30, 26, 10, 50, -48, -73, -73, -62, -84, 30, -50, 82, -24, 59, -107, 121, -75, -84, -7, -110, -27, -85, -114, 108, 114, -40, -41, 42, 123, 110, 10, 31, 93, -15, -85, 115, -87, 15, -48, -6, 23, 118, 112, -59, -111, 27, -89, 74, 27, -92, 8, -110, 51, 29, -38, -70, -63, -7, -41, 40, 5, -61, -95, 44, -58, -118, 52, -5, 95, 78, -59, 68, 30, 124, 95, 83, 2, -80, -49, -11, 23, -84, -32, -112, -115, 36, -88, -115, 92, -56, 111, 44, 49, 23, 35, -25, -6, 48, -34, 7, 67, 23, 49, -76, -21, 33, -17, -46, 4, 57, 95, 92, -12, -50, -101, -113, 34, 19, 116, -86, -122, 17, -83, 5, -56, -45, 90, -46, 57, -58, 94, 107, 28, 23, 120, 44, -55, 113, -77, -122, 77, -91, 90, 84, -55, 57, -118, 17, -128, -16, -36, 121, -40, -31, 48, 42, 3, 45, 95, 74, -19, 103, -56, -124, -58, 60, 9, -52, 5, -105, -8, -1, 121, 84, 124, 71, -75, -45, -90, 110, 36, 110, 124, -9, 35, 60, -117, 59, 92, 38, 20, -56, 49, 29, -44, 14, -80, -11, 89, 109, 67, 73, 78, 109, 119, -66, 127, 27, -19, -68, 31, 26, -10, -127, -88, -21, 12, -91, -123, -123, -113, -9, 44, -77, 67, 7, 58, -13, -123, -13, 81, 115, -92, -103, -34, -77, 87, 3, -36, 65, -107, 18, 97, -121, 94, -56, -115, 110]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@7791a895 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@fffe9bdf - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@7791a895 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@1d16f93d - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@67b92f0a - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@2b9627bc - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@2b9627bc, sealedMessage=javax.crypto.SealedObject@1d16f93d, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@2b9627bc, sealedMessage=javax.crypto.SealedObject@1d16f93d, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 7/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 8/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6e0e048a, sealedMessage=javax.crypto.SealedObject@5bc79255, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@6e0e048a - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@47ef968d - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@5bc79255
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@23e028a9
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@23e028a9 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@610694f1 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: 1994030812
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@610694f1, Crypto_ByteArray [bytearray=[91, -59, -18, 21, 19, 100, 61, 75, -21, 113, 29, -57, 118, 114, -11, 26, -49, -51, -36, 69, 123, -21, -45, -127, -114, 24, -49, -46, -101, 94, -7, -91, 81, 85, 53, -14, 90, -83, -94, 44, -94, -126, -32, 89, 122, 7, -62, -66, -75, 98, 26, 77, 121, 0, -96, -120, 123, 94, 102, -99, -14, 94, -108, -59, -35, -122, 54, 35, 76, 27, -61, 81, 47, -57, 11, 19, 42, 60, -32, 113, 42, 93, 73, 38, -77, -47, -33, -105, 25, -99, -101, 43, -112, 73, 1, 60, 41, -34, -86, -104, -38, 55, -76, -14, 80, -82, 76, -89, -74, -108, -44, -27, -95, -4, -47, -64, -91, -70, -5, 68, -85, 105, -7, -77, 0, -57, 118, -124, -24, -77, -61, -41, -85, -113, 42, 31, -46, -36, -99, 46, -58, 90, -109, 102, -74, 16, -119, 108, -125, 71, -35, 18, -91, -117, 121, -68, -100, -29, -56, 97, 110, -78, -107, -33, 24, -83, -39, 28, 71, -81, 124, -2, -82, 22, -100, -89, 1, -37, -119, 21, 18, -54, -16, 14, -52, -88, 97, 53, 103, 81, 99, 80, -47, -96, 109, -20, 87, -120, -10, 25, 102, -68, -75, 52, 80, 44, 26, 19, -118, -77, 10, 122, -102, 55, 78, 54, 86, 12, 0, -85, -35, 51, 19, -5, -124, -39, -39, 106, -62, -80, -61, -86, -98, -95, 118, 49, -90, 18, 32, 25, -25, -47, -94, 89, 107, -105, -42, -46, -39, 13, 107, -38, 123, -14, 14, 107]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@1f36e637 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@1532f - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@1f36e637 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@35d176f7 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@1dfe2924 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@6ebc05a6 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6ebc05a6, sealedMessage=javax.crypto.SealedObject@35d176f7, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6ebc05a6, sealedMessage=javax.crypto.SealedObject@35d176f7, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 8/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 9/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@49fc609f, sealedMessage=javax.crypto.SealedObject@cd2dae5, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@49fc609f - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@3a883ce7 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@cd2dae5
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@4973813a
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@4973813a - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@22a67b4 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -2019648335
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@22a67b4, Crypto_ByteArray [bytearray=[103, 85, -103, 85, -92, 122, -96, 88, -11, -88, 48, 120, 37, 78, -88, 77, 6, -12, 22, -45, -123, 56, -122, -120, -101, -60, 5, 83, 10, -3, 93, 30, 61, -105, -125, 53, -29, 61, 44, 115, 120, 104, 1, 20, -2, 55, 52, 74, 29, 122, 114, 116, 5, 2, 11, 49, -49, 47, -15, -50, 56, 102, 93, -72, 49, 111, -16, -43, 11, 4, 35, -15, 103, -6, 64, 32, 104, -121, 22, 79, -33, -99, -82, 40, -70, -71, -105, -65, 76, 47, 41, -37, 8, -24, 97, 118, 53, 59, 97, -2, 69, -34, 35, -23, -27, 66, -30, 127, -52, -75, 122, -6, 61, -60, 101, -112, -67, -5, -4, 4, 51, -32, -54, 10, -107, 36, 120, -67, 83, 9, -80, 56, -68, 23, -63, 3, 85, -23, 89, -71, 23, -106, -5, -93, 43, -21, 60, 24, -57, 81, 10, 30, 59, 52, 72, 57, -112, 30, 75, 60, -83, 68, -117, -26, 31, -25, -102, -24, -3, -32, -72, -58, 91, 99, -3, 105, 56, -69, 100, -7, -92, -128, 14, -9, 112, -105, 120, -11, 47, -67, -32, -61, 0, -62, -122, -54, 68, 21, 8, -37, 65, -97, 21, 41, -57, 108, -119, 32, -125, -55, -89, -12, 117, 25, 119, 102, 17, 74, -7, 20, -92, 44, 41, 25, -119, 39, -37, -17, 100, -5, -90, -34, 43, 78, 111, 45, 15, -22, 47, -55, -113, 120, -46, -114, -96, -46, -3, -119, 101, -83, 35, -30, 43, 71, -90, 125]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@72b6cbcc - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@16e6e - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@72b6cbcc - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@30b8a058 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@7494e528 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@4bbfb90a - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@4bbfb90a, sealedMessage=javax.crypto.SealedObject@30b8a058, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@4bbfb90a, sealedMessage=javax.crypto.SealedObject@30b8a058, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 9/10
+     [java] Debug [ROLE_idp-PROTOCOL] - Session started: 10/10
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - Receive
+     [java] Debug [ROLE_idp-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_idp-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@67205a84, sealedMessage=javax.crypto.SealedObject@7d0587f1, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@67205a84 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Asym] [RSA/PKCS#8/9736] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@5d76b067 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypting [Sym] [AES/RAW/256] javax.crypto.SealedObject@7d0587f1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Decrypted [Sym] [AES/RAW/256] java.security.SignedObject@2a17b7b6
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:50:00 CET 2024 to Thu Feb 10 23:50:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 354573758810963109925742508302461650180260491452
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Verification OK [RSA/X.509/2352] SHA256withRSA java.security.SignedObject@2a17b7b6 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.1
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - david = david
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 95358580 = 95358580
+     [java] Debug [ROLE_idp-PROTOCOL] - CHECK # 5.2
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_idp-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_5
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -599782562
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[david, charlie]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@76707e36 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - hash: -729867017
+     [java] Debug [ROLE_idp-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[java.security.SignedObject@76707e36, Crypto_ByteArray [bytearray=[46, -104, 127, -13, 7, 18, -19, -75, -94, -73, -110, 108, -20, 74, -10, 6, -123, -30, 32, 9, 5, 104, 0, -36, -20, -95, 29, -114, -93, -22, -25, -113, -120, 100, -41, 40, 112, 84, 55, -22, 117, 17, 47, 89, 6, -56, -47, 54, -123, 19, -34, 33, 30, 80, 53, -38, -91, 17, -52, -69, -3, 29, 89, -29, -106, 120, 114, 113, 67, -20, -55, 63, 29, -20, -1, -109, -52, -54, -45, 23, -93, -120, -45, 125, 98, 77, 97, -46, 67, 108, -30, -104, 7, -50, -43, 19, 14, -34, 91, -97, -84, -8, 121, 126, -115, 118, -53, 7, -42, 11, 56, -116, 111, 56, -118, 12, -112, -34, -127, -23, -120, 121, -45, -32, 25, -107, 35, -99, 75, 14, -125, -71, 66, -4, -37, 78, -77, -54, 26, -20, 6, 58, -107, -120, 5, 90, 53, -23, -10, 74, 92, -80, 8, -93, 38, 23, -93, 79, -1, -80, 83, -113, -96, 7, 27, -47, -23, 28, 19, 109, -126, -110, 106, -95, 5, -103, -118, 24, 16, 42, -125, -41, 118, 91, 26, 111, 101, -104, 20, -107, -63, -90, 21, -107, -105, 121, 99, 72, 61, -37, -18, 11, -58, -127, 23, 60, -5, 41, -24, -24, -102, 98, 14, 9, 103, 30, 89, 39, 3, 32, -9, -118, -100, -123, 77, 58, 95, -76, -80, -62, -127, 59, -80, 109, -3, -113, 95, -22, 1, -12, -84, -34, 50, 47, -111, 29, 9, -25, -122, 122, 53, 67, 44, -78, -77, 113]]]]
+     [java] Debug [ROLE_idp-ENCRYPTION] - PrivateKey retrieved: <charlie>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signed [RSA/PKCS#8/9752] SHA256withRSA java.security.SignedObject@3fd7a715 - Provider: SunRsaSign
+     [java] Debug [ROLE_idp-ENCRYPTION] - PublicKey found: <david>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate found: <root>
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #0
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Certificate #1
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=david,OU=Computer Science,O=Teesside University,L=Middlesbrough,ST=Tees Valley,C=United Kingdom
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:49:00 CET 2024 to Thu Feb 10 23:49:00 CET 2028
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 581090847144898682819571650522181722946402387591
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Root Certificate
+     [java] Debug [ROLE_idp-ENCRYPTION] - Subject: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Issuer: CN=root,OU=CA,O=Certificati Digitali,L=Rome,ST=Italy,C=European Union
+     [java] Debug [ROLE_idp-ENCRYPTION] - Validity: from Sun Feb 11 23:47:00 CET 2024 to Fri Feb 09 23:47:00 CET 2029
+     [java] Debug [ROLE_idp-ENCRYPTION] - Version: 3
+     [java] Debug [ROLE_idp-ENCRYPTION] - Serial Number: 658743272021970120643348023544875863741843963262
+     [java] Debug [ROLE_idp-ENCRYPTION] - Signature Algorithm Name: SHA256withRSA
+     [java] Debug [ROLE_idp-ENCRYPTION] - Key Generated [Sym] [AES/RAW/256] AES javax.crypto.spec.SecretKeySpec@17cae - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding java.security.SignedObject@3fd7a715 - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Sym] [AES/RAW/256] AES/CBC/PKCS5Padding javax.crypto.SealedObject@7f13d6e - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypting [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding [B@51cdd8a - Provider: SunJCE
+     [java] Debug [ROLE_idp-ENCRYPTION] - Encrypted [Asym] [RSA/X.509/2352] RSA/ECB/OAEPWithSHA-256AndMGF1Padding javax.crypto.SealedObject@d44fc21 - Provider: SunJCE
+     [java] Debug [ROLE_idp-LANGUAGE] - Send
+     [java] Debug [ROLE_idp-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_idp-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@d44fc21, sealedMessage=javax.crypto.SealedObject@7f13d6e, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@d44fc21, sealedMessage=javax.crypto.SealedObject@7f13d6e, cipherScheme='AES'}
+     [java] Debug [ROLE_idp-PROTOCOL] - SSO_A1 - ROLE_idp - STEP_6
+     [java] Debug [ROLE_idp-PROTOCOL] - sso_a1.SSO_A1_ROLE_idp@4cb2c100
+     [java] Debug [ROLE_idp-PROTOCOL] - Session completed: 10/10
+     [java] Debug [ROLE_idp-NETWORK] - Connection closed
+     [java] Debug [ROLE_idp-SESSION] - Session closed
+     [java] SSO_A1 [ROLE_idp] - Execution time was 4707,628 ms
+
+BUILD SUCCESSFUL
+Total time: 5 seconds

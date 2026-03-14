@@ -1,0 +1,40 @@
+INPUT:
+   ../casestudies/NSPK.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  secrets (NxNA secret between A,B)
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 62 ms
+  parseTime 0 ms
+  visitedNodes: 18 nodes
+  depth: 4 plies
+
+ATTACK TRACE:
+(x20,1) -> i: {NxNA(1),x20}_(pk(i))
+i -> (x25,1): {NxNA(1),x20}_(pk(x25))
+(x25,1) -> i: {NxNA(1),NxNB(2)}_(pk(x20))
+i -> (x20,1): {NxNA(1),NxNB(2)}_(pk(x20))
+(x20,1) -> i: {NxNB(2)}_(pk(i))
+i -> (x25,1): {NxNB(2)}_(pk(x25))
+i -> (i,17): NxNA(1)
+i -> (i,17): NxNA(1)
+
+
+% Reached State:
+% 
+% secrets(NxNA(1),secrecyset(x25,1,pNxNA),i)
+% contains(secrecyset(x25,1,pNxNA),x20)
+% contains(secrecyset(x25,1,pNxNA),x25)
+% secrets(inv(pk(x25)),secrecyset(x25,1,pInvpkB),i)
+% contains(secrecyset(x25,1,pInvpkB),x25)
+% state_rB(x25,2,inv(pk(x25)),pk,x20,NxNA(1),{NxNA(1),x20}_(pk(x25)),NxNB(2),{NxNA(1),NxNB(2)}_(pk(x20)),{NxNB(2)}_(pk(x25)),1)
+% state_rA(x20,2,i,inv(pk(x20)),pk,NxNA(1),{NxNA(1),x20}_(pk(i)),NxNB(2),{NxNA(1),NxNB(2)}_(pk(x20)),{NxNB(2)}_(pk(i)),1)
+% contains(secrecyset(x20,1,pInvpkA),x20)
+% secrets(inv(pk(x20)),secrecyset(x20,1,pInvpkA),i)
+% contains(secrecyset(x20,1,pNxNA),i)
+% contains(secrecyset(x20,1,pNxNA),x20)
+% secrets(NxNA(1),secrecyset(x20,1,pNxNA),i)
+

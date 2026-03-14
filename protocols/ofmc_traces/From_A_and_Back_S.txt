@@ -1,0 +1,37 @@
+INPUT:
+   ../casestudies_library/From_A_and_Back.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  secrets
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 92 ms
+  parseTime 0 ms
+  visitedNodes: 5 nodes
+  depth: 3 plies
+
+ATTACK TRACE:
+(a,1) -> i: {{{x26,Msg(1),a}_inv(sk(a))}_(pk(x26))}_(pk(x26))
+i -> (x26,1): {{{x26,Msg(1),a}_inv(sk(a))}_(pk(x26))}_(pk(x26))
+(x26,1) -> i: Msg(1)
+i -> (a,1): Msg(1)
+(a,1) -> i: {{a,Msg(1),x26}_inv(sk(a))}_(pk(x26))
+i -> (i,17): Msg(1)
+i -> (i,17): Msg(1)
+
+
+% Reached State:
+% 
+% secrets(Msg(1),secrecyset(a,1,pMsg),i)
+% wrequest(a,x26,paBMsg,Msg(1),i)
+% state_ra(a,2,inv(sk(a)),pk,sk,x26,Msg(1),{{{x26,Msg(1),a}_inv(sk(a))}_(pk(x26))}_(pk(x26)),{{a,Msg(1),x26}_inv(sk(a))}_(pk(x26)),1)
+% contains(secrecyset(a,1,pMsg),a)
+% contains(secrecyset(a,1,pMsg),x26)
+% secrets(inv(sk(a)),secrecyset(a,1,pInvska),i)
+% contains(secrecyset(a,1,pInvska),a)
+% state_rB(x26,1,inv(pk(x26)),pk(x26),sk,a,Msg(1),{x26,Msg(1),a}_inv(sk(a)),{{x26,Msg(1),a}_inv(sk(a))}_(pk(x26)),{{{x26,Msg(1),a}_inv(sk(a))}_(pk(x26))}_(pk(x26)),1)
+% witness(a,x26,pBaMsg,Msg(1))
+% witness(x26,a,paBMsg,Msg(1))
+

@@ -1,0 +1,17 @@
+_SET ?I 'alice'
+_SET ?SP 'bob'
+_SET ?idp 'charlie'
+_SET ?C 'david'
+_SET ?agreesData (generateNumberData | inv_checkData | eq_checkData)
+_SET ?generatesData (generateNumberData)
+_SET ?Data 'X2','X5','X8','X11','X14','X17','X20','X23','X26','X29'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL auth:[?Data],[?C,?SP]
+
+;AUTH_VIOLATION
+G z.( !("(z)z[active]==?SP" & ?agreesData) |! X F y.("(y)y[active]==?C" & ?can_recover & ("(z,y)z[mess]==y[mess]")))
+
+
+_WRITE
+_BYE

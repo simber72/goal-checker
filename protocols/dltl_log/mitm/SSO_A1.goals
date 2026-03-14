@@ -1,0 +1,17 @@
+_SET ?I 'alice'
+_SET ?SP 'bob'
+_SET ?idp 'charlie'
+_SET ?C 'david'
+_SET ?agreesURI (generateNumberURI | inv_checkURI | eq_checkURI)
+_SET ?generatesURI (generateNumberURI)
+_SET ?URI 'X0','X5','X10','X15','X20','X25','X30','X35','X40','X45'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL auth:[?URI],[?SP,?C]
+
+;AUTH_VIOLATION
+G z.( !("(z)z[active]==?C" & ?agreesURI) |! X F y.("(y)y[active]==?SP" & ?can_recover & ("(z,y)z[mess]==y[mess]")))
+
+
+_WRITE
+_BYE

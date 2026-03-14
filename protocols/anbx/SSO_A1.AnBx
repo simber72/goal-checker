@@ -1,0 +1,60 @@
+Protocol: SSO_A1 AnBx
+# the flawed version of Google's Single Sign On from before 2008 [Armando et al.]
+# in comments the standard specification (which is safe)
+# Counterexample manually made from the ofmc attack-trace
+
+Types: 
+
+	Agent C,idp,SP,I;
+	Certified C,idp,SP,I;
+	Number URI,ID,Data,URI2,ID2;
+	Function [Agent -> PublicKey] sk,pk;
+
+Knowledge: 
+
+	C: C,idp,SP,sk(idp);
+	idp: C,idp,sk(idp),inv(sk(idp));
+	SP: idp,SP,C,sk(idp);
+	I: C,idp,SP,sk(idp);
+
+Actions:
+
+	#(x802,1) -> i: pseudonym(x802),{|x802,i,URI(1)|}_(secChCr(pseudonym(x802),i))
+	[C] *->* I : C,I,URI
+
+	#i -> (x801,1): i,{|x802,x801,x305|}_(secChCr(i,x801))
+	I  *->* SP : C,SP,URI2
+
+	#(x801,1) -> i: {|x802,idp,x801,ID(2),x305|}_(secChCr(x801,i))
+    SP *->* I : C,idp,SP,ID,URI2
+
+	#i -> (x802,1): {|x802,idp,i,x504,URI(1)|}_(secChCr(i,pseudonym(x802)))
+    I *->* [C] : C,idp,I,ID2,URI
+
+	#(x802,1) -> i: {|x802,idp,i,x504,URI(1)|}_(secChCr(x802,idp))
+	C -> I : {{C,idp,I,ID2,URI}inv(sk(C))}pk(idp)
+
+	#i -> (idp,1): {|x802,idp,i,x504,URI(1)|}_(secChCr(x802,idp))
+	I -> idp: {{C,idp,I,ID2,URI}inv(sk(C))}pk(idp)
+
+	#(idp,1) -> i: {|{x802,idp}_inv(sk(idp)),URI(1)|}_(secChCr(idp,x802))
+	idp -> I: {{{C,idp}inv(sk(idp)),URI}inv(sk(idp))}pk(C)
+
+	#i -> (x802,1): {|{x802,idp}_inv(sk(idp)),URI(1)|}_(secChCr(idp,x802))
+	I -> C: {{{C,idp}inv(sk(idp)),URI}inv(sk(idp))}pk(C)
+
+	#(x802,1) -> i: pseudonym(x802),{|{x802,idp}_inv(sk(idp)),URI(1)|}_(secChCr(pseudonym(x802),i))
+	[C] *->* I: {C,idp}inv(sk(idp)),URI
+
+	#i -> (x801,1): i,{|{x802,idp}_inv(sk(idp)),x305|}_(secChCr(i,x801))
+	I *->* SP: {C,idp}inv(sk(idp)),URI2 
+
+	#(x801,1) -> i: {|Data(6)|}_(secChCr(x801,i))
+	SP *->* I : Data
+
+
+Goals:
+
+	SP authenticates C on URI
+	#Added the following to be able to generate Java code
+	#SP authenticates I on URI2

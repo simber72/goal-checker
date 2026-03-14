@@ -1,0 +1,33 @@
+Protocol: From_A_and_Back_S AnBx
+
+Types:
+	Agent a;
+	Agent B;
+	Number Msg;
+	Function sk,pk;
+	Number empty;
+	Function [Agent -> PublicKey] hk;
+	Function [Untyped -> Number] hash;
+	Function [Untyped,SymmetricKey -> Number] hmac;
+	Agent I
+
+Knowledge:
+	a: a,B,sk,pk,inv(sk(a)),empty,hk,hash,hmac;
+	B: a,B,sk,pk(B),inv(pk(B)),empty,pk,hk,hash,hmac;
+	I: I,a,sk,pk(I),inv(pk(I)),empty,pk,hk,hash,hmac;
+	where B!=I
+
+Actions:
+	a -> I: {{{B,Msg,a}inv(sk(a))}pk(B)}pk(B)
+	I -> B: {{{B,Msg,a}inv(sk(a))}pk(B)}pk(B)
+	B -> I: Msg
+	I -> a: Msg
+	a -> I: {{a,Msg,B}inv(sk(a))}pk(B)
+	I -> B: {{a,Msg,B}inv(sk(a))}pk(B)
+
+Goals:
+	#a weakly authenticates B on Msg
+	#B weakly authenticates a on Msg
+	Msg secret between a,B
+	#inv(sk(a)) secret between a
+	#inv(pk(B)) secret between B

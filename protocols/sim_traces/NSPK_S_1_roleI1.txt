@@ -1,0 +1,191 @@
+Buildfile: /Users/usuario/repositoriosGitHub/CriptoSimulator/protocols/src/nspk_s_1/build.xml
+
+ROLE_I1:
+     [java] Debug [NSPK_S_1-ALWAYS] - Verbose mode on
+     [java] Debug [ROLE_I1-APPLICATION] - Reading config file: NSPK_S_1.properties
+     [java] Debug [ROLE_I1-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I1-ENCRYPTION] - cipherScheme = AES
+     [java] Debug [ROLE_I1-ENCRYPTION] - keySize = 256
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyGenerationScheme = AES
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyGenerationSize = 256
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyGenerationSchemePBE = PBKDF2WithHmacSHA512
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyPairGenerationScheme = RSA
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyPairGenerationSize = 2048
+     [java] Debug [ROLE_I1-ENCRYPTION] - secureRandomAlgorithm = DRBG
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmacAlgorithm = HmacSHA256
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmacKeySize = 256
+     [java] Debug [ROLE_I1-ENCRYPTION] - messageDigestAlgorithm = SHA-256
+     [java] Debug [ROLE_I1-ENCRYPTION] - messageDigestSignatureAlgorithm = SHA256
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyAgreementAlgorithm = DH
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyAgreementKeyPairGenerationScheme = DH
+     [java] Debug [ROLE_I1-ENCRYPTION] - dhModulusSize = 4096
+     [java] Debug [ROLE_I1-ENCRYPTION] - ecGenParameterSpec = secp256r1
+     [java] Debug [ROLE_I1-ENCRYPTION] - asymCipherSchemeBlock = RSA
+     [java] Debug [ROLE_I1-ENCRYPTION] - sslContext = TLSv1.3
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyTypeToCipher = RSA -> RSA/ECB/OAEPWithSHA-256AndMGF1Padding, X25519 -> ECDHwithX25519-KDF2-SHA256/AES-GCM/256/NoPadding, Camellia -> Camellia/CBC/PKCS7Padding, X448 -> ECDHwithX448-KDF2-SHA512/AES-GCM/256/NoPadding, ElGamal -> ElGamal/ECB/OAEPWithSHA-256AndMGF1Padding, ChaCha -> ChaCha20-Poly1305, EC -> ECIESwithAES-GCM/256/NoPadding, AES -> AES/CBC/PKCS5Padding, Blowfish -> Blowfish/CBC/PKCS5Padding
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyTypeToSignature = RSA -> SHA256withRSA, DSA -> SHA256withDSA, Ed448 -> Ed448, RSASSA-PSS -> RSASSA-PSS, Ed25519 -> Ed25519, EC -> SHA256withECDSA
+     [java] Debug [ROLE_I1-ENCRYPTION] - securityProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - cipherSchemeProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyGenerationSchemeProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyGenerationSchemePBEProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyPairGenerationSchemeProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - secureRandomProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmacProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - messageDigestProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - signatureProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - asymEncProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - keyAgreementProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - sslContextProvider = default
+     [java] Debug [ROLE_I1-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I1-APPLICATION] - Loading aliases
+     [java] Debug [ROLE_I1-APPLICATION] - Role: ROLE_I1 - Alias: alice
+     [java] Debug [ROLE_I1-APPLICATION] - myAlias: alice
+     [java] Debug [ROLE_I1-APPLICATION] - Role: ROLE_B - Alias: bob
+     [java] Debug [ROLE_I1-APPLICATION] - Role: ROLE_A - Alias: charlie
+     [java] Debug [ROLE_I1-APPLICATION] - Host: localhost - Port: 55556
+     [java] Debug [ROLE_I1-APPLICATION] - Channel Type: SSL_PLAIN - Role: SERVER
+     [java] Debug [ROLE_I1-APPLICATION] - Channel: ROLE_I1_channel_ROLE_A_Server_Insecure
+     [java] Debug [ROLE_I1-APPLICATION] - Host: 127.0.0.1 - Port: 55557
+     [java] Debug [ROLE_I1-APPLICATION] - Channel Type: SSL_PLAIN - Role: CLIENT
+     [java] Debug [ROLE_I1-APPLICATION] - Channel: ROLE_I1_channel_ROLE_B_Client_Insecure
+     [java] Debug [ROLE_I1-APPLICATION] - myRole: ROLE_I1
+     [java] Debug [ROLE_I1-APPLICATION] - sessions: 1
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading KeyStore: tls #0
+     [java] Debug [ROLE_I1-ENCRYPTION] - Reading config file (KSS): ../../keystore/alice.pwd
+     [java] Debug [ROLE_I1-ENCRYPTION] - tls - KeyStoreType: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - tls - LocalKeyStore: ../../keystore/alice_tls.private
+     [java] Debug [ROLE_I1-ENCRYPTION] - tls - RemotelKeyStore: ../../keystore/alice_tls.public
+     [java] Debug [ROLE_I1-ENCRYPTION] - My Alias: alice
+     [java] Debug [ROLE_I1-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading KeyStore: enc #1
+     [java] Debug [ROLE_I1-ENCRYPTION] - Reading config file (KSS): ../../keystore/alice.pwd
+     [java] Debug [ROLE_I1-ENCRYPTION] - enc - KeyStoreType: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - enc - LocalKeyStore: ../../keystore/alice_enc.private
+     [java] Debug [ROLE_I1-ENCRYPTION] - enc - RemotelKeyStore: ../../keystore/alice_enc.public
+     [java] Debug [ROLE_I1-ENCRYPTION] - My Alias: alice
+     [java] Debug [ROLE_I1-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading KeyStore: sig #2
+     [java] Debug [ROLE_I1-ENCRYPTION] - Reading config file (KSS): ../../keystore/alice.pwd
+     [java] Debug [ROLE_I1-ENCRYPTION] - sig - KeyStoreType: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - sig - LocalKeyStore: ../../keystore/alice_sig.private
+     [java] Debug [ROLE_I1-ENCRYPTION] - sig - RemotelKeyStore: ../../keystore/alice_sig.public
+     [java] Debug [ROLE_I1-ENCRYPTION] - My Alias: alice
+     [java] Debug [ROLE_I1-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading KeyStore: hmc #3
+     [java] Debug [ROLE_I1-ENCRYPTION] - Reading config file (KSS): ../../keystore/alice.pwd
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmc - KeyStoreType: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmc - LocalKeyStore: ../../keystore/alice_hmc.private
+     [java] Debug [ROLE_I1-ENCRYPTION] - hmc - RemotelKeyStore: ../../keystore/alice_hmc.public
+     [java] Debug [ROLE_I1-ENCRYPTION] - My Alias: alice
+     [java] Debug [ROLE_I1-ENCRYPTION] - RootCA: root
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: tls #0
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_tls.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_tls.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: enc #1
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_enc.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_enc.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: sig #2
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_sig.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_sig.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: hmc #3
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_hmc.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_hmc.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-SESSION] - Initializing channel - cs: Channel Settings - Port: 55556 - Role: SERVER - Type: SSL_PLAIN
+     [java] Debug [ROLE_I1-SESSION] - Initializing channel - keystore: anbxj.Crypto_KeyStoreSettings@3f0ee7cb
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: tls #0
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_tls.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_tls.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: enc #1
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_enc.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_enc.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: sig #2
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_sig.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_sig.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Building KeyStore: hmc #3
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Local KeyStore: ../../keystore/alice_hmc.private - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Loading Remote KeyStore: ../../keystore/alice_hmc.public - Type: PKCS12
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-ENCRYPTION] - Certificate retrieved: <alice>
+     [java] Debug [ROLE_I1-SESSION] - Initializing channel - cs: Channel Settings - Port: 55557 - Role: CLIENT - Type: SSL_PLAIN
+     [java] Debug [ROLE_I1-SESSION] - Initializing channel - keystore: anbxj.Crypto_KeyStoreSettings@3f0ee7cb
+     [java] Debug [ROLE_I1-SESSION] - Opening session
+     [java] Debug [ROLE_I1-NETWORK] - Starting server on port 55556 ...
+     [java] Debug [ROLE_I1-ALWAYS] - Server started on port 55556
+     [java] Debug [ROLE_I1-NETWORK] - Waiting for clients ...
+     [java] Debug [ROLE_I1-NETWORK] - Request from Client received ...
+     [java] Debug [ROLE_I1-SESSION] - Opening session
+     [java] Debug [ROLE_I1-NETWORK] - Starting Client for 127.0.0.1:55557
+     [java] Debug [ROLE_I1-ALWAYS] - Connected to Server 127.0.0.1:55557 - ChannelType: SSL_PLAIN
+     [java] Debug [ROLE_I1-PROTOCOL] - Session started: 1/1
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_0
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Receive
+     [java] Debug [ROLE_I1-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I1-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@12843fce, sealedMessage=javax.crypto.SealedObject@3dd3bcd, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check PERFORMED on anbxj.Crypto_SealedPair
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.toString - Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@12843fce, sealedMessage=javax.crypto.SealedObject@3dd3bcd, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.hashCode - -1261691343
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_0
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_1
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Send
+     [java] Debug [ROLE_I1-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I1-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@12843fce, sealedMessage=javax.crypto.SealedObject@3dd3bcd, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@12843fce, sealedMessage=javax.crypto.SealedObject@3dd3bcd, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_1
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_2
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Receive
+     [java] Debug [ROLE_I1-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I1-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6d8a00e3, sealedMessage=javax.crypto.SealedObject@548b7f67, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check PERFORMED on anbxj.Crypto_SealedPair
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.toString - Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6d8a00e3, sealedMessage=javax.crypto.SealedObject@548b7f67, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.hashCode - 187482966
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_2
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_3
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Send
+     [java] Debug [ROLE_I1-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I1-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6d8a00e3, sealedMessage=javax.crypto.SealedObject@548b7f67, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@6d8a00e3, sealedMessage=javax.crypto.SealedObject@548b7f67, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_3
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_4
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Receive
+     [java] Debug [ROLE_I1-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I1-NETWORK] - Received <- Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@23ceabc1, sealedMessage=javax.crypto.SealedObject@5d5eef3d, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check PERFORMED on anbxj.Crypto_SealedPair
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.toString - Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@23ceabc1, sealedMessage=javax.crypto.SealedObject@5d5eef3d, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - INV check OK - anbxj.Crypto_SealedPair.hashCode - 642835470
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_4
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_5
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-LANGUAGE] - Send
+     [java] Debug [ROLE_I1-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I1-NETWORK] - Sending -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@23ceabc1, sealedMessage=javax.crypto.SealedObject@5d5eef3d, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-NETWORK] - Sent -> Crypto_SealedPair{sealedKey=javax.crypto.SealedObject@23ceabc1, sealedMessage=javax.crypto.SealedObject@5d5eef3d, cipherScheme='AES'}
+     [java] Debug [ROLE_I1-PROTOCOL] - NSPK_S_1 - ROLE_I1 - STEP_5
+     [java] Debug [ROLE_I1-PROTOCOL] - nspk_s_1.NSPK_S_1_ROLE_I1@6b143ee9
+     [java] Debug [ROLE_I1-PROTOCOL] - Session completed: 1/1
+     [java] Debug [ROLE_I1-NETWORK] - Connection closed
+     [java] Debug [ROLE_I1-SESSION] - Session closed
+     [java] Debug [ROLE_I1-NETWORK] - Connection closed
+     [java] Debug [ROLE_I1-SESSION] - Session closed
+     [java] NSPK_S_1 [ROLE_I1] - Execution time was 1141,110 ms
+
+BUILD SUCCESSFUL
+Total time: 1 second

@@ -1,0 +1,32 @@
+INPUT:
+   ../casestudies/GSM.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  secrets (Msg secret between B,M)
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 49 ms
+  parseTime 0 ms
+  visitedNodes: 4 nodes
+  depth: 2 plies
+
+ATTACK TRACE:
+i -> (x28,1): x204,x205,x206
+(x28,1) -> i: x204
+i -> (x28,1): x205
+(x28,1) -> i: {|Msg(2)|}_x206
+i -> (i,17): Msg(2)
+i -> (i,17): Msg(2)
+
+
+% Reached State:
+% 
+% secrets(Msg(2),secrecyset(x28,1,pMsg),i)
+% state_rB(x28,2,hash,x29,x206,x205,x204,x204,x205,x206,Msg(2),{|Msg(2)|}_x206,1)
+% contains(secrecyset(x28,1,pMsg),x28)
+% contains(secrecyset(x28,1,pMsg),x29)
+% state_rH(x30,0,ki(x31,x30),hash,kc,x31,x32,1)
+% state_rM(x20,0,ki(x20,x24),hash,kc,x24,x27,1)
+

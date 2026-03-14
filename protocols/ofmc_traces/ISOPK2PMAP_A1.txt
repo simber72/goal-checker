@@ -1,0 +1,38 @@
+INPUT:
+   ../casestudies/ISOpubKeyTwoPassMutualAuthProt.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  weak_auth (A authenticates B on Text3)
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 4552 ms
+  parseTime 0 ms
+  visitedNodes: 1217 nodes
+  depth: 7 plies
+
+ATTACK TRACE:
+(s,1) -> i: {x901,sk(x901)}_inv(sk(s))
+i -> (x901,1): {x901,sk(x901)}_inv(sk(s))
+(x901,1) -> i: empty
+i -> (x901,1): empty
+(x901,1) -> i: {x901,sk(x901)}_inv(sk(s)),{NxNA(3),x902,Text1(3)}_inv(sk(x901))
+(s,2) -> i: {x902,sk(x902)}_inv(sk(s))
+i -> (x902,2): {x902,sk(x902)}_inv(sk(s))
+(x902,2) -> i: empty
+i -> (x902,2): empty
+(x902,2) -> i: {x902,sk(x902)}_inv(sk(s)),{NxNA(6),x901,Text1(6)}_inv(sk(x902))
+i -> (x901,1): {x902,sk(x902)}_inv(sk(s)),{NxNA(6),x901,Text1(6)}_inv(sk(x902))
+
+
+% Reached State:
+% 
+% request(x901,x902,pABText3,Text1(6),1)
+% state_rA(x901,3,sk(s),empty,inv(sk(x901)),sk(x901),s,x902,{x901,sk(x901)}_inv(sk(s)),NxNA(3),Text1(3),{x901,sk(x901)}_inv(sk(s)),{NxNA(3),x902,Text1(3)}_inv(sk(x901)),{NxNA(3),x902,Text1(3)}_inv(sk(x901)),Text1(6),NxNA(6),{NxNA(6),x901,Text1(6)}_inv(sk(x902)),sk(x902),{x902,sk(x902)}_inv(sk(s)),{x902,sk(x902)}_inv(sk(s)),{NxNA(6),x901,Text1(6)}_inv(sk(x902)),1)
+% state_rB(x34,0,sk(s),empty,inv(sk(x34)),sk(x34),s,x35,2)
+% state_rs(s,1,empty,sk(x36),sk(x902),inv(sk(s)),sk(s),x36,x902,{x902,sk(x902)}_inv(sk(s)),2)
+% state_rA(x902,2,sk(s),empty,inv(sk(x902)),sk(x902),s,x901,{x902,sk(x902)}_inv(sk(s)),NxNA(6),Text1(6),{x902,sk(x902)}_inv(sk(s)),{NxNA(6),x901,Text1(6)}_inv(sk(x902)),2)
+% state_rB(x27,0,sk(s),empty,inv(sk(x27)),sk(x27),s,x28,1)
+% state_rs(s,1,empty,sk(x29),sk(x901),inv(sk(s)),sk(s),x29,x901,{x901,sk(x901)}_inv(sk(s)),1)
+

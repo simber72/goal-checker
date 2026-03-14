@@ -1,0 +1,980 @@
+Buildfile: /Users/usuario/repositoriosGitHub/CriptoSimulator/protocols/src/andrewsecurerpc_a/build.xml
+
+ROLE_I:
+     [java] Debug [AndrewSecureRPC_A-ALWAYS] - Verbose mode on
+     [java] Debug [ROLE_I-APPLICATION] - Reading config file: AndrewSecureRPC_A.properties
+     [java] Debug [ROLE_I-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I-ENCRYPTION] - cipherScheme = AES
+     [java] Debug [ROLE_I-ENCRYPTION] - keySize = 256
+     [java] Debug [ROLE_I-ENCRYPTION] - keyGenerationScheme = AES
+     [java] Debug [ROLE_I-ENCRYPTION] - keyGenerationSize = 256
+     [java] Debug [ROLE_I-ENCRYPTION] - keyGenerationSchemePBE = PBKDF2WithHmacSHA512
+     [java] Debug [ROLE_I-ENCRYPTION] - keyPairGenerationScheme = RSA
+     [java] Debug [ROLE_I-ENCRYPTION] - keyPairGenerationSize = 2048
+     [java] Debug [ROLE_I-ENCRYPTION] - secureRandomAlgorithm = DRBG
+     [java] Debug [ROLE_I-ENCRYPTION] - hmacAlgorithm = HmacSHA256
+     [java] Debug [ROLE_I-ENCRYPTION] - hmacKeySize = 256
+     [java] Debug [ROLE_I-ENCRYPTION] - messageDigestAlgorithm = SHA-256
+     [java] Debug [ROLE_I-ENCRYPTION] - messageDigestSignatureAlgorithm = SHA256
+     [java] Debug [ROLE_I-ENCRYPTION] - keyAgreementAlgorithm = DH
+     [java] Debug [ROLE_I-ENCRYPTION] - keyAgreementKeyPairGenerationScheme = DH
+     [java] Debug [ROLE_I-ENCRYPTION] - dhModulusSize = 4096
+     [java] Debug [ROLE_I-ENCRYPTION] - ecGenParameterSpec = secp256r1
+     [java] Debug [ROLE_I-ENCRYPTION] - asymCipherSchemeBlock = RSA
+     [java] Debug [ROLE_I-ENCRYPTION] - sslContext = TLSv1.3
+     [java] Debug [ROLE_I-ENCRYPTION] - keyTypeToCipher = RSA -> RSA/ECB/OAEPWithSHA-256AndMGF1Padding, X25519 -> ECDHwithX25519-KDF2-SHA256/AES-GCM/256/NoPadding, Camellia -> Camellia/CBC/PKCS7Padding, X448 -> ECDHwithX448-KDF2-SHA512/AES-GCM/256/NoPadding, ElGamal -> ElGamal/ECB/OAEPWithSHA-256AndMGF1Padding, ChaCha -> ChaCha20-Poly1305, EC -> ECIESwithAES-GCM/256/NoPadding, AES -> AES/CBC/PKCS5Padding, Blowfish -> Blowfish/CBC/PKCS5Padding
+     [java] Debug [ROLE_I-ENCRYPTION] - keyTypeToSignature = RSA -> SHA256withRSA, DSA -> SHA256withDSA, Ed448 -> Ed448, RSASSA-PSS -> RSASSA-PSS, Ed25519 -> Ed25519, EC -> SHA256withECDSA
+     [java] Debug [ROLE_I-ENCRYPTION] - securityProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - cipherSchemeProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - keyGenerationSchemeProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - keyGenerationSchemePBEProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - keyPairGenerationSchemeProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - secureRandomProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - hmacProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - messageDigestProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - signatureProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - asymEncProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - keyAgreementProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - sslContextProvider = default
+     [java] Debug [ROLE_I-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I-APPLICATION] - Loading aliases
+     [java] Debug [ROLE_I-APPLICATION] - Role: ROLE_I - Alias: alice
+     [java] Debug [ROLE_I-APPLICATION] - myAlias: alice
+     [java] Debug [ROLE_I-APPLICATION] - Role: ROLE_B - Alias: bob
+     [java] Debug [ROLE_I-APPLICATION] - Role: ROLE_A - Alias: charlie
+     [java] Debug [ROLE_I-APPLICATION] - Host: localhost - Port: 55556
+     [java] Debug [ROLE_I-APPLICATION] - Channel Type: SSL_PLAIN - Role: SERVER
+     [java] Debug [ROLE_I-APPLICATION] - Channel: ROLE_I_channel_ROLE_A_Server_Insecure
+     [java] Debug [ROLE_I-APPLICATION] - Host: 127.0.0.1 - Port: 55557
+     [java] Debug [ROLE_I-APPLICATION] - Channel Type: SSL_PLAIN - Role: CLIENT
+     [java] Debug [ROLE_I-APPLICATION] - Channel: ROLE_I_channel_ROLE_B_Client_Insecure
+     [java] Debug [ROLE_I-APPLICATION] - myRole: ROLE_I
+     [java] Debug [ROLE_I-APPLICATION] - sessions: 10
+     [java] Debug [ROLE_I-SESSION] - Initializing channel - cs: Channel Settings - Port: 55556 - Role: SERVER - Type: SSL_PLAIN
+     [java] Debug [ROLE_I-SESSION] - Initializing channel - cs: Channel Settings - Port: 55557 - Role: CLIENT - Type: SSL_PLAIN
+     [java] Debug [ROLE_I-SESSION] - Opening session
+     [java] Debug [ROLE_I-NETWORK] - Starting server on port 55556 ...
+     [java] Debug [ROLE_I-ALWAYS] - Server started on port 55556
+     [java] Debug [ROLE_I-NETWORK] - Waiting for clients ...
+     [java] Debug [ROLE_I-NETWORK] - Request from Client received ...
+     [java] Debug [ROLE_I-SESSION] - Opening session
+     [java] Debug [ROLE_I-NETWORK] - Starting Client for 127.0.0.1:55557
+     [java] Debug [ROLE_I-ALWAYS] - Connected to Server 127.0.0.1:55557 - ChannelType: SSL_PLAIN
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 1/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@75a1cd57]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: -885164027
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@75a1cd57]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@75a1cd57]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@75a1cd57]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@27ddd392
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@27ddd392
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 668849042
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@75a1cd57
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1973538135
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@27ddd392
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@27ddd392
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2a098129
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2a098129
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 705265961
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2a098129
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2a098129
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 987405879
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 1/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 2/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@63e31ee]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 1541004444
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@63e31ee]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@63e31ee]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@63e31ee]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@6842775d
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@6842775d
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1749186397
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@63e31ee
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 104739310
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@6842775d
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@6842775d
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@1761e840
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@1761e840
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 392292416
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@1761e840
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@1761e840
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@3f102e87
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@3f102e87
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1058025095
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 2/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 3/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@27abe2cd]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 2101841275
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@27abe2cd]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@27abe2cd]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@27abe2cd]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2280cdac
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2280cdac
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 578866604
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@27abe2cd
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 665576141
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2280cdac
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2280cdac
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@44e81672
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@44e81672
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1156060786
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@44e81672
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@44e81672
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@65e579dc
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@65e579dc
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1709537756
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 3/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 4/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@61baa894]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: -1219079358
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@61baa894]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@61baa894]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@61baa894]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@449b2d27
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@449b2d27
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1151020327
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@61baa894
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1639622804
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@449b2d27
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@449b2d27
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@66133adc
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@66133adc
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1712536284
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@66133adc
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@66133adc
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@46f5f779
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@46f5f779
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1190524793
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 4/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 5/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@1c2c22f3]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 1908919713
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@1c2c22f3]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@1c2c22f3]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@1c2c22f3]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@52d455b8
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@52d455b8
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1389647288
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@1c2c22f3
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 472654579
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@52d455b8
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@52d455b8
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@6956de9
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@6956de9
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 110456297
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@6956de9
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@6956de9
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2d6d8735
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2d6d8735
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 762152757
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3ada9e37
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 5/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 6/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@ba4d54]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 1448474626
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@ba4d54]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@ba4d54]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@ba4d54]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@6f79caec
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@6f79caec
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1870252780
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@ba4d54
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 12209492
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@6f79caec
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@6f79caec
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2471cca7
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2471cca7
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 611437735
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2471cca7
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2471cca7
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@763d9750
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@763d9750
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1983747920
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@763d9750
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@763d9750
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 6/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 7/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@d70c109]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 1661758391
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@d70c109]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@d70c109]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@d70c109]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@47d384ee
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@47d384ee
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1205044462
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@d70c109
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 225493257
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@47d384ee
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@47d384ee
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@3930015a
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@3930015a
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 959447386
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@3930015a
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@3930015a
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 33524623
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 7/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 8/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@c39f790]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: 1641390654
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@c39f790]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@c39f790]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@c39f790]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@50cbc42f
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@50cbc42f
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1355531311
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@c39f790
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 205125520
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@50cbc42f
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@50cbc42f
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@13b6d03
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@13b6d03
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 20671747
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@13b6d03
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@13b6d03
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@64c64813
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@64c64813
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1690716179
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@1ff8b8f
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 8/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 9/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@3ecf72fd]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: -1804919381
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@3ecf72fd]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@3ecf72fd]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@3ecf72fd]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@25618e91
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@25618e91
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 627150481
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@3ecf72fd
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1053782781
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@25618e91
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@25618e91
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2cfb4a64
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2cfb4a64
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 754666084
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2cfb4a64
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2cfb4a64
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 801197928
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 9/10
+     [java] Debug [ROLE_I-PROTOCOL] - Session started: 10/10
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.2
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != charlie
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.4
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.toString - alice != bob
+     [java] Debug [ROLE_I-PROTOCOL] - NOTEQ check OK - java.lang.String.hashCode - 92903040 != 97717
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- AnBx_Params [v=[charlie, javax.crypto.SealedObject@61443d8f]]
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 0.1
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check PERFORMED on java.lang.String
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.toString - charlie = charlie
+     [java] Debug [ROLE_I-PROTOCOL] - EQ check OK - java.lang.String.hashCode - 739067762 = 739067762
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_0
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - size: 2
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - hash: -1226840003
+     [java] Debug [ROLE_I-LANGUAGE] - AnBx_Params - params: AnBx_Params [v=[charlie, javax.crypto.SealedObject@61443d8f]]
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@61443d8f]]
+     [java] Debug [ROLE_I-NETWORK] - Sent -> AnBx_Params [v=[charlie, javax.crypto.SealedObject@61443d8f]]
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_1
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@7bb11784
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@7bb11784
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 2075203460
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 2.2
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@61443d8f
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 1631862159
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_2
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@7bb11784
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@7bb11784
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_3
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@34033bd0
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@34033bd0
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 872627152
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_4
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@34033bd0
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@34033bd0
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_5
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Receive
+     [java] Debug [ROLE_I-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I-NETWORK] - Received <- javax.crypto.SealedObject@3aa9e816
+     [java] Debug [ROLE_I-PROTOCOL] - CHECK # 6.1
+     [java] Debug [ROLE_I-PROTOCOL] - INV check PERFORMED on javax.crypto.SealedObject
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.toString - javax.crypto.SealedObject@3aa9e816
+     [java] Debug [ROLE_I-PROTOCOL] - INV check OK - javax.crypto.SealedObject.hashCode - 984213526
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_6
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-LANGUAGE] - Send
+     [java] Debug [ROLE_I-NETWORK] - ---------- SEND -----------
+     [java] Debug [ROLE_I-NETWORK] - Sending -> javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-NETWORK] - Sent -> javax.crypto.SealedObject@2fc14f68
+     [java] Debug [ROLE_I-PROTOCOL] - AndrewSecureRPC_A - ROLE_I - STEP_7
+     [java] Debug [ROLE_I-PROTOCOL] - andrewsecurerpc_a.AndrewSecureRPC_A_ROLE_I@6438a396
+     [java] Debug [ROLE_I-PROTOCOL] - Session completed: 10/10
+     [java] Debug [ROLE_I-NETWORK] - Connection closed
+     [java] Debug [ROLE_I-SESSION] - Session closed
+     [java] Debug [ROLE_I-NETWORK] - Connection closed
+     [java] Debug [ROLE_I-SESSION] - Session closed
+     [java] AndrewSecureRPC_A [ROLE_I] - Execution time was 711,538 ms
+
+BUILD SUCCESSFUL
+Total time: 1 second

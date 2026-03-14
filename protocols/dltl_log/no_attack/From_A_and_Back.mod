@@ -1,0 +1,16 @@
+aaction,nsession,nstep,sactive,spassive,@mess,stype
+From_A_and_Back_1,generateNumberMsg&1&0&bob&-&X0&anbxj.Crypto_ByteArray
+From_A_and_Back_1,AnBx_Params&1&0&bob&-&alice;X0;bob&anbxj.AnBx_Params
+From_A_and_Back_1,sent&1&0&bob&alice&@3e6fa38a;@6f7fd0e6&javax.crypto.SealedObject
+From_A_and_Back_1,received&1&0&alice&bob&@3e6fa38a;@6f7fd0e6&javax.crypto.SealedObject
+From_A_and_Back_1,eq_check&1&0&alice&-&alice&java.lang.String.toString
+From_A_and_Back_1,eq_check&1&0&alice&-&bob&java.lang.String.toString
+From_A_and_Back_1,sent&1&1&alice&bob&X0&string
+From_A_and_Back_1,received&1&1&bob&alice&X0&string
+From_A_and_Back_1,eq_check&1&1&bob&-&X0&anbxj.Crypto_ByteArray.toString
+From_A_and_Back_1,AnBx_Params&1&2&bob&-&bob;X0;alice&anbxj.AnBx_Params
+From_A_and_Back_1,sent&1&2&bob&alice&@589838eb;@4f7d0008&javax.crypto.SealedObject
+From_A_and_Back_1,received&1&2&alice&bob&@589838eb;@4f7d0008&javax.crypto.SealedObject
+From_A_and_Back_1,eq_check&1&2&alice&-&alice&java.lang.String.toString
+From_A_and_Back_1,eq_check&1&2&alice&-&bob&java.lang.String.toString
+From_A_and_Back_1,eq_check&1&2&alice&-&X0&anbxj.Crypto_ByteArray.toString

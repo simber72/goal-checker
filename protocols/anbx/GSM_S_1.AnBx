@@ -1,0 +1,35 @@
+Protocol: GSM_S_1 AnB
+# Counterexample generated as passive intruder
+# Changes: removed unused types, and knowledge
+
+Types:
+	Agent H,M,B,I1;
+	Number NB,Msg;
+	Function [Agent,Agent ->* Number] ki;
+	Function [Number,Number -> SymmetricKey] kc;
+	Function [Untyped -> Number] hash;
+
+Knowledge:
+	M: M,B,H,kc,hash,ki(M,H);
+	B: B,M,hash;
+	H: B,H,M,kc,hash,ki(M,H);
+	I1: I1,B,H,M,kc,hash,ki(I1,H),ki(M,I1);
+	M,H share ki(M,H);
+	where H!=I1, M!=I1, B!=I1
+
+Actions:
+
+		H -> I1: NB,hash(NB,ki(M,H)),kc(NB,ki(M,H))
+		I1 -> B: NB,hash(NB,ki(M,H)),kc(NB,ki(M,H))
+
+		B -> I1: NB
+		I1 -> M: NB
+
+		M -> I1: hash(NB,ki(M,H))
+		I1 -> B: hash(NB,ki(M,H))
+
+		B -> I1: {|Msg|}kc(NB,ki(M,H))
+		I1 -> M: {|Msg|}kc(NB,ki(M,H))
+
+Goals:
+	Msg secret between B,M

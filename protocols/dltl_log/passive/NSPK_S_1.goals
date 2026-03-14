@@ -1,0 +1,16 @@
+_SET ?I1 'alice'
+_SET ?B 'bob'
+_SET ?A 'charlie'
+_SET ?agreesNxNA (generateNumberNxNA | inv_checkNxNA | eq_checkNxNA)
+_SET ?generatesNxNA (generateNumberNxNA)
+_SET ?NxNA 'X0'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL secret:[?NxNA],[?A,?B]
+
+;SECRET_VIOLATION
+F z.(("(z)z[active]==?A" | "(z)z[active]==?B") & ?generatesNxNA & X F y.(("(y)y[active]!=?A") & ("(y)y[active]!=?B")& ?can_read & ("(z,y)z[mess]==y[mess]") & ("(y)y[type]!='javax.crypto.SealedObject.toString'")))
+
+
+_WRITE
+_BYE

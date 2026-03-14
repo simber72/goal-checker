@@ -1,0 +1,17 @@
+_SET ?I 'alice'
+_SET ?C 'bob'
+_SET ?idp 'charlie'
+_SET ?SP 'david'
+_SET ?agreesData (generateNumberData | inv_checkData | eq_checkData)
+_SET ?generatesData (generateNumberData)
+_SET ?Data 'X4'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL secret:[?Data],[?C]
+
+;SECRET_VIOLATION
+F z.(("(z)z[active]==?C") & ?generatesData & X F y.(("(y)y[active]!=?C")& ?can_read & ("(z,y)z[mess]==y[mess]") & ("(y)y[type]!='javax.crypto.SealedObject.toString'")))
+
+
+_WRITE
+_BYE

@@ -1,0 +1,15 @@
+aaction,nsession,nstep,sactive,spassive,@mess,stype
+NSPK_1,generateNumberNxNA&1&0&bob&-&X0&anbxj.Crypto_ByteArray
+NSPK_1,AnBx_Params&1&0&bob&-&X0;bob&anbxj.AnBx_Params
+NSPK_1,sent&1&0&bob&alice&@5c7fa833;@28feb3fa&javax.crypto.SealedObject
+NSPK_1,received&1&0&alice&bob&@5c7fa833;@28feb3fa&javax.crypto.SealedObject
+NSPK_1,inv_check&1&0&alice&-&bob&java.lang.String.toString
+NSPK_1,inv_check&1&0&alice&-&X0&anbxj.Crypto_ByteArray.toString
+NSPK_1,generateNumber&1&1&alice&-&X1&anbxj.Crypto_ByteArray
+NSPK_1,AnBx_Params&1&1&alice&-&X0;X1&anbxj.AnBx_Params
+NSPK_1,sent&1&1&alice&bob&@4b9e13df;@8bd1b6a&javax.crypto.SealedObject
+NSPK_1,received&1&1&bob&alice&@4b9e13df;@8bd1b6a&javax.crypto.SealedObject
+NSPK_1,eq_check&1&1&bob&-&X0&anbxj.Crypto_ByteArray.toString
+NSPK_1,sent&1&2&bob&alice&@e25b2fe;@77cd7a0&javax.crypto.SealedObject
+NSPK_1,received&1&2&alice&bob&@e25b2fe;@77cd7a0&javax.crypto.SealedObject
+NSPK_1,eq_check&1&2&alice&-&X1&anbxj.Crypto_ByteArray.toString

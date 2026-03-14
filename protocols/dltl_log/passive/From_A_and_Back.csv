@@ -1,0 +1,16 @@
+#session,step,active_part,passive_part,action,msg_content,msg_type
+1,0,bob,-,generateNumberMsg,X0,anbxj.Crypto_ByteArray
+1,0,bob,-,AnBx_Params,alice;X0;bob,anbxj.AnBx_Params
+1,0,bob,alice,sent,@3e6fa38a;@6f7fd0e6,javax.crypto.SealedObject
+1,0,alice,bob,received,@3e6fa38a;@6f7fd0e6,javax.crypto.SealedObject
+1,0,alice,-,eq_check,alice,java.lang.String.toString
+1,0,alice,-,eq_check,bob,java.lang.String.toString
+1,1,alice,bob,sent,X0,string
+1,1,bob,alice,received,X0,string
+1,1,bob,-,eq_check,X0,anbxj.Crypto_ByteArray.toString
+1,2,bob,-,AnBx_Params,bob;X0;alice,anbxj.AnBx_Params
+1,2,bob,alice,sent,@589838eb;@4f7d0008,javax.crypto.SealedObject
+1,2,alice,bob,received,@589838eb;@4f7d0008,javax.crypto.SealedObject
+1,2,alice,-,eq_check,alice,java.lang.String.toString
+1,2,alice,-,eq_check,bob,java.lang.String.toString
+1,2,alice,-,eq_check,X0,anbxj.Crypto_ByteArray.toString

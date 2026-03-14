@@ -1,0 +1,44 @@
+Open-Source Fixedpoint Model-Checker version 2022
+INPUT:
+   ../casestudies/ISOpubKeyTwoPassMutualAuthProt.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  weak_auth (B authenticates A on Text1)
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 6869 ms
+  parseTime 0 ms
+  visitedNodes: 3238 nodes
+  depth: 8 plies
+
+ATTACK TRACE:
+(s,1) -> i: {x1001,sk(x1001)}_inv(sk(s))
+i -> (x1001,1): {x1001,sk(x1001)}_inv(sk(s))
+(x1001,1) -> i: empty
+i -> (x1001,1): empty
+(x1001,1) -> i: {x1001,sk(x1001)}_inv(sk(s)),{NxNA(3),x1002,Text1(3)}_inv(sk(x1001))
+i -> (s,1): empty
+(s,1) -> i: {x1002,sk(x1002)}_inv(sk(s))
+i -> (x1002,1): {x1002,sk(x1002)}_inv(sk(s))
+(x1002,1) -> i: empty
+i -> (x1002,1): {x1001,sk(x1001)}_inv(sk(s)),{NxNA(3),x1002,Text1(3)}_inv(sk(x1001))
+(x1002,1) -> i: {x1002,sk(x1002)}_inv(sk(s)),{NxNB(6),x1001,Text3(6)}_inv(sk(x1002))
+i -> (x1001,2): {x1001,sk(x1001)}_inv(sk(s))
+(x1001,2) -> i: empty
+i -> (x1001,2): {x1002,sk(x1002)}_inv(sk(s)),{NxNB(6),x1001,Text3(6)}_inv(sk(x1002))
+(x1001,2) -> i: {x1001,sk(x1001)}_inv(sk(s)),{NxNB(8),x1002,Text3(8)}_inv(sk(x1001))
+
+
+% Reached State:
+% 
+% request(x1001,x1002,pBAText1,Text3(6),2)
+% state_rB(x1001,2,sk(s),empty,inv(sk(x1001)),sk(x1001),s,x1002,{x1001,sk(x1001)}_inv(sk(s)),Text3(6),NxNB(6),{NxNB(6),x1001,Text3(6)}_inv(sk(x1002)),sk(x1002),{x1002,sk(x1002)}_inv(sk(s)),{x1002,sk(x1002)}_inv(sk(s)),{NxNB(6),x1001,Text3(6)}_inv(sk(x1002)),NxNB(8),Text3(8),{x1001,sk(x1001)}_inv(sk(s)),{NxNB(8),x1002,Text3(8)}_inv(sk(x1001)),2)
+% state_rA(x1001,2,sk(s),empty,inv(sk(x1001)),sk(x1001),s,x1002,{x1001,sk(x1001)}_inv(sk(s)),NxNA(3),Text1(3),{x1001,sk(x1001)}_inv(sk(s)),{NxNA(3),x1002,Text1(3)}_inv(sk(x1001)),1)
+% state_rB(x1002,2,sk(s),empty,inv(sk(x1002)),sk(x1002),s,x1001,{x1002,sk(x1002)}_inv(sk(s)),Text1(3),NxNA(3),{NxNA(3),x1002,Text1(3)}_inv(sk(x1001)),sk(x1001),{x1001,sk(x1001)}_inv(sk(s)),{x1001,sk(x1001)}_inv(sk(s)),{NxNA(3),x1002,Text1(3)}_inv(sk(x1001)),NxNB(6),Text3(6),{x1002,sk(x1002)}_inv(sk(s)),{NxNB(6),x1001,Text3(6)}_inv(sk(x1002)),1)
+% state_rs(s,2,empty,sk(x1002),sk(x1001),inv(sk(s)),sk(s),x1002,x1001,{x1001,sk(x1001)}_inv(sk(s)),{x1002,sk(x1002)}_inv(sk(s)),1)
+% state_rA(x31,0,sk(s),empty,inv(sk(x31)),sk(x31),s,x33,2)
+% state_rs(s,0,empty,sk(x36),sk(x37),inv(sk(s)),sk(s),x36,x37,2)
+% witness(x1001,x1002,pBAText1,Text1(3))
+% request(x1002,x1001,pBAText1,Text1(3),1)

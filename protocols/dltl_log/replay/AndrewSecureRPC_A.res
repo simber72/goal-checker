@@ -1,0 +1,10 @@
+AndrewSecureRPC_A_01,0
+AndrewSecureRPC_A_02,1
+AndrewSecureRPC_A_03,1
+AndrewSecureRPC_A_04,1
+AndrewSecureRPC_A_05,1
+AndrewSecureRPC_A_06,0
+AndrewSecureRPC_A_07,0
+AndrewSecureRPC_A_08,1
+AndrewSecureRPC_A_09,0
+AndrewSecureRPC_A_10,1

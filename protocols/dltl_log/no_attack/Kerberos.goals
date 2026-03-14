@@ -1,0 +1,17 @@
+_SET ?ath 'alice'
+_SET ?gw 'bob'
+_SET ?s 'charlie'
+_SET ?C 'david'
+_SET ?agreesPayload (generateNumberPayload | inv_checkPayload | eq_checkPayload)
+_SET ?generatesPayload (generateNumberPayload)
+_SET ?Payload 'X8','X16','X24','X32','X40','X48','X56','X64','X72','X80'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL auth:[?Payload],[?C,?s]
+
+;AUTH_VIOLATION
+G z.( !("(z)z[active]==?s" & ?agreesPayload) |! X F y.("(y)y[active]==?C" & ?can_recover & ("(z,y)z[mess]==y[mess]")))
+
+
+_WRITE
+_BYE

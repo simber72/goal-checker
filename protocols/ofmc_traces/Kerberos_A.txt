@@ -1,0 +1,37 @@
+INPUT:
+   ../casestudies/Kerberos_PKINIT.AnB
+SUMMARY:
+  ATTACK_FOUND
+GOAL:
+  weak_auth (C authenticates s on Payload)
+BACKEND:
+  Open-Source Fixedpoint Model-Checker version 2022
+STATISTICS:
+  TIME 4506 ms
+  parseTime 0 ms
+  visitedNodes: 494 nodes
+  depth: 5 plies
+
+ATTACK TRACE:
+(x701,1) -> i: x701,gw,N1(1),{T0(1),N1(1),hash(x701,gw,N1(1))}_inv(sk(x701))
+i -> (ath,1): i,gw,N1(1),x307
+(ath,1) -> i: i,{|ath,i,gw,KCG(2),T1(2)|}_(shk(ath,gw)),{|gw,KCG(2),T1(2),N1(1)|}_Ktemp(2),{tag,{Ktemp(2)}_inv(sk(ath))}_(pk(i))
+i -> (x701,1): x701,x405,{|gw,KCG(2),T1(2),N1(1)|}_Ktemp(2),{tag,{Ktemp(2)}_inv(sk(ath))}_(pk(x701))
+(x701,1) -> i: s,N2(3),x405,{|x701,T1(2)|}_KCG(2)
+i -> (x701,1): x701,x510,{|s,x511,x512,N2(3)|}_KCG(2)
+(x701,1) -> i: x510,{|x701,hash(x512)|}_x511
+i -> (x701,1): {|hash(x512)|}_x511,{|tag,x613|}_x511
+
+
+% Reached State:
+% 
+% request(x701,s,pCsPayload,x613,1)
+% state_rC(x701,4,sk,pk,tag,hash,inv(pk(x701)),pk(x701),inv(sk(x701)),sk(x701),sk(ath),s,gw,ath,N1(1),T0(1),x701,gw,N1(1),{T0(1),N1(1),hash(x701,gw,N1(1))}_inv(sk(x701)),x405,T1(2),KCG(2),{|gw,KCG(2),T1(2),N1(1)|}_Ktemp(2),{T0(1),N1(1),hash(x701,gw,N1(1))}_inv(sk(x701)),Ktemp(2),{Ktemp(2)}_inv(sk(ath)),{tag,{Ktemp(2)}_inv(sk(ath))}_(pk(x701)),x701,x405,{|gw,KCG(2),T1(2),N1(1)|}_Ktemp(2),{tag,{Ktemp(2)}_inv(sk(ath))}_(pk(x701)),N2(3),s,N2(3),x405,{|x701,T1(2)|}_KCG(2),x510,{|x701,T1(2)|}_KCG(2),x512,x511,{|s,x511,x512,N2(3)|}_KCG(2),x701,x510,{|s,x511,x512,N2(3)|}_KCG(2),x510,{|x701,hash(x512)|}_x511,{|x701,hash(x512)|}_x511,x613,{|tag,x613|}_x511,{|hash(x512)|}_x511,{|hash(x512)|}_x511,{|tag,x613|}_x511,1)
+% state_rC(x32,0,sk,pk,tag,hash,inv(pk(x32)),pk(x32),inv(sk(x32)),sk(x32),sk(ath),s,gw,ath,2)
+% state_rath(ath,0,shk(ath,gw),tag,hash,inv(sk(ath)),sk(ath),pk(x34),gw,x34,2)
+% state_rgw(gw,0,shk(ath,gw),shk(gw,s),tag,hash,s,ath,2)
+% state_rs(s,0,shk(gw,s),tag,hash,gw,2)
+% state_rgw(gw,0,shk(ath,gw),shk(gw,s),tag,hash,s,ath,1)
+% state_rs(s,0,shk(gw,s),tag,hash,gw,1)
+% state_rath(ath,1,shk(ath,gw),tag,hash,inv(sk(ath)),sk(ath),pk(i),gw,i,N1(1),x307,i,gw,N1(1),x307,KCG(2),T1(2),Ktemp(2),i,{|ath,i,gw,KCG(2),T1(2)|}_(shk(ath,gw)),{|gw,KCG(2),T1(2),N1(1)|}_Ktemp(2),{tag,{Ktemp(2)}_inv(sk(ath))}_(pk(i)),1)
+

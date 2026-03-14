@@ -1,0 +1,76 @@
+Buildfile: /Users/usuario/repositoriosGitHub/CriptoSimulator/protocols/src/gsm_s_2/build.xml
+
+ROLE_I2:
+     [java] Debug [GSM_S_2-ALWAYS] - Verbose mode on
+     [java] Debug [ROLE_I2-APPLICATION] - Reading config file: GSM_S_2.properties
+     [java] Debug [ROLE_I2-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I2-ENCRYPTION] - cipherScheme = AES
+     [java] Debug [ROLE_I2-ENCRYPTION] - keySize = 256
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyGenerationScheme = AES
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyGenerationSize = 256
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyGenerationSchemePBE = PBKDF2WithHmacSHA512
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyPairGenerationScheme = RSA
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyPairGenerationSize = 2048
+     [java] Debug [ROLE_I2-ENCRYPTION] - secureRandomAlgorithm = DRBG
+     [java] Debug [ROLE_I2-ENCRYPTION] - hmacAlgorithm = HmacSHA256
+     [java] Debug [ROLE_I2-ENCRYPTION] - hmacKeySize = 256
+     [java] Debug [ROLE_I2-ENCRYPTION] - messageDigestAlgorithm = SHA-256
+     [java] Debug [ROLE_I2-ENCRYPTION] - messageDigestSignatureAlgorithm = SHA256
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyAgreementAlgorithm = DH
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyAgreementKeyPairGenerationScheme = DH
+     [java] Debug [ROLE_I2-ENCRYPTION] - dhModulusSize = 4096
+     [java] Debug [ROLE_I2-ENCRYPTION] - ecGenParameterSpec = secp256r1
+     [java] Debug [ROLE_I2-ENCRYPTION] - asymCipherSchemeBlock = RSA
+     [java] Debug [ROLE_I2-ENCRYPTION] - sslContext = TLSv1.3
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyTypeToCipher = RSA -> RSA/ECB/OAEPWithSHA-256AndMGF1Padding, X25519 -> ECDHwithX25519-KDF2-SHA256/AES-GCM/256/NoPadding, Camellia -> Camellia/CBC/PKCS7Padding, X448 -> ECDHwithX448-KDF2-SHA512/AES-GCM/256/NoPadding, ElGamal -> ElGamal/ECB/OAEPWithSHA-256AndMGF1Padding, ChaCha -> ChaCha20-Poly1305, EC -> ECIESwithAES-GCM/256/NoPadding, AES -> AES/CBC/PKCS5Padding, Blowfish -> Blowfish/CBC/PKCS5Padding
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyTypeToSignature = RSA -> SHA256withRSA, DSA -> SHA256withDSA, Ed448 -> Ed448, RSASSA-PSS -> RSASSA-PSS, Ed25519 -> Ed25519, EC -> SHA256withECDSA
+     [java] Debug [ROLE_I2-ENCRYPTION] - securityProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - cipherSchemeProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyGenerationSchemeProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyGenerationSchemePBEProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyPairGenerationSchemeProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - secureRandomProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - hmacProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - messageDigestProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - signatureProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - asymEncProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - keyAgreementProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - sslContextProvider = default
+     [java] Debug [ROLE_I2-ENCRYPTION] - -------------------- crypto config --------------------
+     [java] Debug [ROLE_I2-APPLICATION] - Loading aliases
+     [java] Debug [ROLE_I2-APPLICATION] - Role: ROLE_B - Alias: alice
+     [java] Debug [ROLE_I2-APPLICATION] - Role: ROLE_I2 - Alias: bob
+     [java] Debug [ROLE_I2-APPLICATION] - myAlias: bob
+     [java] Debug [ROLE_I2-APPLICATION] - Role: ROLE_I - Alias: charlie
+     [java] Debug [ROLE_I2-APPLICATION] - Role: ROLE_H - Alias: david
+     [java] Debug [ROLE_I2-APPLICATION] - Role: ROLE_M - Alias: eve
+     [java] Debug [ROLE_I2-APPLICATION] - Host: localhost - Port: 55560
+     [java] Debug [ROLE_I2-APPLICATION] - Channel Type: SSL_PLAIN - Role: SERVER
+     [java] Debug [ROLE_I2-APPLICATION] - Channel: ROLE_I2_channel_ROLE_I_Server_Insecure
+     [java] Debug [ROLE_I2-APPLICATION] - myRole: ROLE_I2
+     [java] Debug [ROLE_I2-APPLICATION] - sessions: 1
+     [java] Debug [ROLE_I2-SESSION] - Initializing channel - cs: Channel Settings - Port: 55560 - Role: SERVER - Type: SSL_PLAIN
+     [java] Debug [ROLE_I2-SESSION] - Opening session
+     [java] Debug [ROLE_I2-NETWORK] - Starting server on port 55560 ...
+     [java] Debug [ROLE_I2-ALWAYS] - Server started on port 55560
+     [java] Debug [ROLE_I2-NETWORK] - Waiting for clients ...
+     [java] Debug [ROLE_I2-NETWORK] - Request from Client received ...
+     [java] Debug [ROLE_I2-PROTOCOL] - Session started: 1/1
+     [java] Debug [ROLE_I2-PROTOCOL] - GSM_S_2 - ROLE_I2 - STEP_4
+     [java] Debug [ROLE_I2-PROTOCOL] - gsm_s_2.GSM_S_2_ROLE_I2@4ccabbaa
+     [java] Debug [ROLE_I2-LANGUAGE] - Receive
+     [java] Debug [ROLE_I2-NETWORK] - ---------- RECEIVE -------------
+     [java] Debug [ROLE_I2-NETWORK] - Received <- Crypto_ByteArray [bytearray=[-44, -53, -38, 109, 80, 89, -121, -107, 2, 2, -1, -33, 28, -10, 43, 59, -4, -12, -14, 3, 100, 114, -26, -127, -116, 50, 6, -31, 118, -49, 50, 30, -127, -127, -27, -52, -70, -70, -91, -98, -96, 87, 85, 62, -29, 50, 51, 125, 91, 7, -126, -52, 114, 15, 48, 98, -125, 100, -80, 127, 74, 118, -18, 110, 87, -47, 44, -99, -59, -79, 80, -69, -6, 41, 37, -116, -79, 35, 31, 14, 65, -34, 126, -85, 71, -92, 7, 33, -71, -62, 25, -95, 9, 82, -59, 73, -55, 7, 24, 50, -104, -22, -122, 16, 105, 55, -110, -98, -56, -57, 105, -87, -15, -89, -29, 100, -111, 48, 113, -37, -27, 110, -78, -4, 37, 11, 97, -22, -58, -46, -49, -88, 94, -108, -57, -113, -99, 2, 37, 16, 122, -55, -109, 91, -44, -8, 49, 70, 14, -82, -34, 8, 87, 30, 80, 122, 115, -95, 53, -104, -43, -73, -89, 64, -45, 73, -89, -12, 25, -82, -106, -56, -98, -127, -118, -64, -94, 29, -105, 72, -13, -24, -73, -90, 68, -52, 22, -100, 66, -93, 9, 16, 68, 60, -117, -53, 63, -108, 99, -22, -96, -42, -35, 70, 53, 38, 14, 52, 26, 38, 39, -6, -42, -127, -73, 40, 106, 3, -81, -80, -41, 26, -81, -31, 51, -107, 52, -102, 105, 0, -20, -86, 76, 25, -64, -83, 74, -70, -1, 78, 13, -39, 123, -111, -79, -3, 8, -31, -3, 91, 29, -128, 18, 25, -109, 80]]
+     [java] Debug [ROLE_I2-PROTOCOL] - CHECK # 4.1
+     [java] Debug [ROLE_I2-PROTOCOL] - INV check PERFORMED on anbxj.Crypto_ByteArray
+     [java] Debug [ROLE_I2-PROTOCOL] - INV check OK - anbxj.Crypto_ByteArray.toString - Crypto_ByteArray [bytearray=[-44, -53, -38, 109, 80, 89, -121, -107, 2, 2, -1, -33, 28, -10, 43, 59, -4, -12, -14, 3, 100, 114, -26, -127, -116, 50, 6, -31, 118, -49, 50, 30, -127, -127, -27, -52, -70, -70, -91, -98, -96, 87, 85, 62, -29, 50, 51, 125, 91, 7, -126, -52, 114, 15, 48, 98, -125, 100, -80, 127, 74, 118, -18, 110, 87, -47, 44, -99, -59, -79, 80, -69, -6, 41, 37, -116, -79, 35, 31, 14, 65, -34, 126, -85, 71, -92, 7, 33, -71, -62, 25, -95, 9, 82, -59, 73, -55, 7, 24, 50, -104, -22, -122, 16, 105, 55, -110, -98, -56, -57, 105, -87, -15, -89, -29, 100, -111, 48, 113, -37, -27, 110, -78, -4, 37, 11, 97, -22, -58, -46, -49, -88, 94, -108, -57, -113, -99, 2, 37, 16, 122, -55, -109, 91, -44, -8, 49, 70, 14, -82, -34, 8, 87, 30, 80, 122, 115, -95, 53, -104, -43, -73, -89, 64, -45, 73, -89, -12, 25, -82, -106, -56, -98, -127, -118, -64, -94, 29, -105, 72, -13, -24, -73, -90, 68, -52, 22, -100, 66, -93, 9, 16, 68, 60, -117, -53, 63, -108, 99, -22, -96, -42, -35, 70, 53, 38, 14, 52, 26, 38, 39, -6, -42, -127, -73, 40, 106, 3, -81, -80, -41, 26, -81, -31, 51, -107, 52, -102, 105, 0, -20, -86, 76, 25, -64, -83, 74, -70, -1, 78, 13, -39, 123, -111, -79, -3, 8, -31, -3, 91, 29, -128, 18, 25, -109, 80]]
+     [java] Debug [ROLE_I2-PROTOCOL] - INV check OK - anbxj.Crypto_ByteArray.hashCode - 516551821
+     [java] Debug [ROLE_I2-PROTOCOL] - GSM_S_2 - ROLE_I2 - STEP_4
+     [java] Debug [ROLE_I2-PROTOCOL] - gsm_s_2.GSM_S_2_ROLE_I2@4ccabbaa
+     [java] Debug [ROLE_I2-PROTOCOL] - Session completed: 1/1
+     [java] Debug [ROLE_I2-NETWORK] - Connection closed
+     [java] Debug [ROLE_I2-SESSION] - Session closed
+     [java] GSM_S_2 [ROLE_I2] - Execution time was 549,678 ms
+
+BUILD SUCCESSFUL
+Total time: 1 second

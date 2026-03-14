@@ -1,0 +1,17 @@
+_SET ?I 'alice'
+_SET ?A 'bob'
+_SET ?B 'charlie'
+_SET ?s 'david'
+_SET ?agreesText1 (generateNumberText1 | inv_checkText1 | eq_checkText1)
+_SET ?generatesText1 (generateNumberText1)
+_SET ?Text1 'X1','','X7','','X13','','X19','','X25',''
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL auth:[?Text1],[?B,?A]
+
+;AUTH_VIOLATION
+G z.( !("(z)z[active]==?A" & ?agreesText1) |! X F y.("(y)y[active]==?B" & ?can_recover & ("(z,y)z[mess]==y[mess]")))
+
+
+_WRITE
+_BYE

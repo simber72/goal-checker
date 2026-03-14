@@ -1,0 +1,60 @@
+Protocol: SSO_S AnBx
+# the flawed version of Google's Single Sign On from before 2008 [Armando et al.]
+# in comments the standard specification (which is safe)
+# Counterexample from the attack trace produced by ofmc (manually made)
+
+Types: 
+
+	Agent C,idp,SP,I;
+	Certified C,idp,SP,I;
+	Number URI,ID,Data,URI2,ID2;
+	Function [Agent -> PublicKey] sk,pk;
+
+Knowledge: 
+
+	C: C,idp,SP,sk,pk,inv(sk(C));
+	idp: C,idp,sk,pk,inv(sk(idp)),inv(pk(idp));
+	SP: idp,SP,sk,pk;
+	I: C,sk(idp),sk,pk;
+
+Actions:
+
+	
+	#(x304,1) -> i: pseudonym(x304),{|x304,i,URI(1)|}_(secChCr(pseudonym(x304),i))
+	[C] *->* I: C,I,URI
+
+	#i -> (x304,1): i,{|x304,x304,x305|}_(secChCr(i,x304))
+	I *->* C: C,C,URI2
+
+	#(x304,1) -> i: {|x304,idp,x304,ID(2),x305|}_(secChCr(x304,i))
+	C *->* I: C,idp,C,ID,URI2
+
+	#i -> (x304,1): {|x304,idp,i,x504,URI(1)|}_(secChCr(i,pseudonym(x304)))
+	I *->* [C]: C,idp,I,ID2,URI
+
+	#(x304,1) -> i: {|x304,idp,i,x504,URI(1)|}_(secChCr(x304,idp))
+	C -> I: {{C,idp,I,ID2,URI}inv(sk(C))}pk(idp)
+
+	#i -> (idp,1): {|x304,idp,i,x504,URI(1)|}_(secChCr(x304,idp))
+	I -> idp: {{C,idp,I,ID2,URI}inv(sk(C))}pk(idp)
+
+	#(idp,1) -> i: {|{x304,idp}_inv(sk(idp)),URI(1)|}_(secChCr(idp,x304))
+	idp -> I: {{{C,idp}inv(sk(idp)),URI}inv(sk(idp))}pk(C)
+
+	#i -> (x304,1): {|{x304,idp}_inv(sk(idp)),URI(1)|}_(secChCr(idp,x304))
+	I -> C: {{{C,idp}inv(sk(idp)),URI}inv(sk(idp))}pk(C)
+
+	#(x304,1) -> i: pseudonym(x304),{|{x304,idp}_inv(sk(idp)),URI(1)|}_(secChCr(pseudonym(x304),i))
+	[C] *->* I: {C,idp}inv(sk(idp)),URI
+
+	#i -> (x304,1): i,{|{x304,idp}_inv(sk(idp)),x305|}_(secChCr(i,x304))
+	I *->* C: {C,idp}inv(sk(idp)),URI2
+
+	#(x304,1) -> i: {|Data(6)|}_(secChCr(x304,i))
+	C *->* I: Data
+
+
+Goals:
+
+	#Data secret between SP,C 
+	Data secret between C

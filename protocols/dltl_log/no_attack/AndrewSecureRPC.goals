@@ -1,0 +1,15 @@
+_SET ?B 'alice'
+_SET ?A 'bob'
+_SET ?agreesNB2 (generateNumberNB2 | inv_checkNB2 | eq_checkNB2)
+_SET ?generatesNB2 (generateNumberNB2)
+_SET ?NB2 'X5','X10','X15','X20','X25','X30','X35','X40','X45','X50'
+_SET ?can_recover (inv_check | eq_check)
+_SET ?can_read (inv_check)
+;GOAL auth:[?NB2],[?A,?B]
+
+;AUTH_VIOLATION
+G z.( !("(z)z[active]==?B" & ?agreesNB2) |! X F y.("(y)y[active]==?A" & ?can_recover & ("(z,y)z[mess]==y[mess]")))
+
+
+_WRITE
+_BYE

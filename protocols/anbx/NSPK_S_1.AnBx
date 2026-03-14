@@ -1,0 +1,26 @@
+Protocol: NSPK_S_1 AnB
+# Counterexample generated as passive intruder
+# Changes: compacted the list of agents
+
+Types:
+	Agent A,B,I1;
+	Number NxNA,NxNB;
+	Function [Agent -> PublicKey] pk
+
+Knowledge:
+	A: A,pk,inv(pk(A)),B;
+	B: B,pk,inv(pk(B));
+	I1: I1,pk,inv(pk(I1)),A,B;
+	where A!=I1, B!=I1
+
+Actions:
+
+	A -> I1: {NxNA,A}pk(B)
+	I1 -> B: {NxNA,A}pk(B)
+	B -> I1: {NxNA,NxNB}pk(A)
+	I1 -> A: {NxNA,NxNB}pk(A)
+	A -> I1: {NxNB}pk(B)
+	I1 -> B: {NxNB}pk(B)
+
+Goals:
+	NxNA secret between A,B
