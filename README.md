@@ -24,10 +24,10 @@ project/
 
 ## 🚀 Usage notes
 
-- [Use of the goal_checker](https://github.com/simber72/CryptoSimulator/tree/main/goal_checker) 
-- [Set of protocols used in the experiments](https://github.com/simber72/CryptoSimulator/tree/main/protocols)
-- [Test the steps with the protocol set](https://github.com/simber72/CryptoSimulator/tree/main/test)
-- [The AnBxJ library](https://github.com/simber72/CryptoSimulator/tree/main/AnBxJ)
+- [Use of the goal_checker](https://github.com/simber72/goal-checker/tree/main/goal_checker) 
+- [Set of protocols used in the experiments](https://github.com/simber72/goal-checker/tree/main/protocols)
+- [Test the steps with the protocol set](https://github.com/simber72/goal-checker/tree/main/test)
+- [The AnBxJ library](https://github.com/simber72/goal-checker/tree/main/AnBxJ)
 
 ## 🔗 Dependencies
 The ```goal_checker``` is based on the AnBx framework (https://paolo.science/anbx/). 
