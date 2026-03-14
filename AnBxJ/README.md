@@ -1,4 +1,4 @@
-# 🛠️ AnBxJ and Bouncy Castle Crypto Provider libraries
+# 🛠️ AnBxJ library and Bouncy Castle Crypto Provider library
 
 Both the libraries are used by the AnBx framework https://paolo.science/anbx/
 to derive the Java-based implementation of a protocol from its Alice&Bob specification.
