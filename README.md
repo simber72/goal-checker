@@ -8,7 +8,7 @@ The project is organized as follows:
 
 ```
 project/
-├── AnBxJ            <----------------- AnBxJ library 
+├── AnBxJ            <----------------- AnBxJ and Bouncy Castle Crypto libraries
 ├── goal_checker     <----------------- .py modules         
 ├── protocols/
     ├── anbx/        <----------------- AnBx files of protocol specification
