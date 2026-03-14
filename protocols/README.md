@@ -147,7 +147,7 @@ The ```sim_launcher``` module has been used to compile the Java-code of the prot
 
 ## Java-based implementations
 The ```src``` folder includes the Java source code of the protocols. The Java code has been generated from the AnBx specification by using the ```anbxc``` compiler from the AnBx framework (framework https://paolo.science/anbx/)
-and, in case,  manually changed.
+and, in case,  manually changed (the changed/newly added lines include comments prefixed by *SB*).
 Each Java-based implementation includes a ```.property``` and a ```.build.xml``` configuration file.
 The path of the AnBJ library has been set to the path ```./AnBxJ/``` of this repository.
 
