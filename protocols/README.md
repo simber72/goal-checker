@@ -19,7 +19,7 @@ The following table summarizes the protocols, the security goals and the negativ
 | Protocol  |  Security goal | Test Case
 | -------- |  --------------------- | ----------------------
 | AndrewSecureRPC (P1)  |  ```A``` authenticates ```B``` on ```NB2``` | P_1_A (replay)
-| From_A_and_Back (P_2) | ```Msg secret``` between ```a```,```B``` | P_2_S$ (passive) 
+| From_A_and_Back (P_2) | ```Msg secret``` between ```a```,```B``` | P_2_S (passive) 
 | GSM (P_3)            |  ```Msg``` secret between ```B```,```M``` | P_3_S_1 (passive)
 |                      |                                            | P_3_S_2 (mitm)
 | NSPK (P_4)           | ```NxNA``` secret between ```A```,```B``` | P_4_S_1 (passive)
