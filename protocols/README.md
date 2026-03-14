@@ -12,7 +12,7 @@ The folder ```protocols``` includes the artifacts produced for a set protocols. 
 
 ## Protocols and security goals (anbx)
 Procols and security goals are specified using the [AnBx notation](https://paolo.science/anbxtutorial/tools/OFMC-tutorial.pdf)
-and the example are taken from the [AnBx tool](https://www.dais.unive.it/~modesti/anbx/).
+and the examples are taken from the [AnBx tool](https://www.dais.unive.it/~modesti/anbx/).
 
 The following table summarizes the protocols and the security goals:
 
@@ -146,7 +146,8 @@ The ```sim_traces``` folder includes the execution traces produced by running th
 The ```sim_launcher``` module has been used to compile the Java-code of the protocol, run the simulation for a number of sessions and generate the execution traces.
 
 ## Java-based implementations
-The ```src``` folder includes the Java source code of the protocols. The Java code has been generated from the AnB specification by using the ```anbxc``` compiler from the AnBx framework (framework https://paolo.science/anbx/).
+The ```src``` folder includes the Java source code of the protocols. The Java code has been generated from the AnBx specification by using the ```anbxc``` compiler from the AnBx framework (framework https://paolo.science/anbx/)
+and, in case,  manually changed.
 Each Java-based implementation includes a ```.property``` and a ```.build.xml``` configuration file.
-The path of the AnBJ library has been set to the path ```./AnBxJ/original``` of this repository.
+The path of the AnBJ library has been set to the path ```./AnBxJ/``` of this repository.
 
