@@ -32,7 +32,7 @@ project/
 ## 🔗 Dependencies
 The ```goal_checker``` is based on the AnBx framework (https://paolo.science/anbx/). 
 The following artifacts either come from or have been generated with the AnBx framework:
-1. The AnBxJ library (```AnBxJ```)
+1. The AnBxJ and BCC libraries (```AnBxJ```)
 2. The AnBx specification of the set of protocols considered in the experiments (```protocols/anbx```)
 3. The set of public/private keys of aliases (```protocols/keystore```), 
 4. The counterexamples of security goals (```protocols/ofmc_traces```), and 
