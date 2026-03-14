@@ -1,5 +1,4 @@
 
-*.java linguist-detectable=true
-*.py linguist-detectable=true
-*.mod linguist-detectable=false
-+.sh linguist-detectable=true
+ *.java linguist-detectable=true
+ *.py linguist-detectable=true
+ *.* linguist-detectable=false
