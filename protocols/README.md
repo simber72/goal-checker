@@ -14,7 +14,7 @@ The folder ```protocols``` includes the artifacts produced for a set protocols. 
 Procols and security goals are specified using the [AnBx notation](https://paolo.science/anbxtutorial/tools/OFMC-tutorial.pdf)
 and the examples are taken from the [AnBx tool](https://www.dais.unive.it/~modesti/anbx/).
 
-The following table summarizes the protocols and the security goals:
+The following table summarizes the protocols, the security goals and the negative test cases:
 
 | Protocol  |  Security goal | Test Case
 | -------- |  --------------------- | ----------------------
@@ -34,7 +34,7 @@ The following table summarizes the protocols and the security goals:
 |                  |  ```Data```  secret between ```SP```, ```C``` | P_8_S (mitm)
 
 
-All the protocols violate the corresponding security goals.
+All the protocols violate the corresponding security goals (at least a negative test case succeeds).
 
 Security goals to be verified fall in these categories:
 - secrecy
