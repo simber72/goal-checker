@@ -1,4 +1,4 @@
-Simona Bernardi
-Joaquin Ezpeleta
-Abel Romeo Lancina
+Simona Bernardi,
+Joaquin Ezpeleta,
+Abel Romeo Lancina,
 Sergio Martínez Lahoz
